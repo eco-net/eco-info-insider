@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_rsSek" value="name:id;datatype:int,name:name;datatype:varchar,name:gen_text_id;datatype:int,name:intern;datatype:smallint,name:func_id;datatype:int,name:gen_text;datatype:varchar" />
+	<infoitem key="UD_rsHelp" value="name:id;datatype:int,name:name;datatype:varchar,name:gen_text_id;datatype:int,name:intern;datatype:smallint,name:sec_id;datatype:int,name:gen_text;datatype:varchar" />
+	<infoitem key="UD_rsText" value="name:id;datatype:int,name:name;datatype:varchar,name:thetext;datatype:varchar" />
+</info>

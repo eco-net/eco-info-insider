@@ -1,0 +1,3 @@
+document.write('<font style="font-size:larger"><b><a href="http://www.eco-info.dk/ok/detail.asp?id=17078&count=1&sektion1=dgs&recid1=17078&recname1=Økoringen&offset=0" target="_blank">Forbruger Messe Silkeborg</a></b></font><br>26 til 27. oktober 2002 | Silkeborg<br><br>')
+document.write('<font style="font-size:larger"><b><a href="http://www.eco-info.dk/ok/detail.asp?id=17078&count=1&sektion1=dgs&recid1=17078&recname1=Økoringen&offset=1" target="_blank">Forbruger Messe Viborg</a></b></font><br>19 til 20. oktober 2002 | Viborg<br><br>')
+document.write('<a href="http://www.eco-info.dk" target="_blank"><font style="color: #999999">Leveret af Øko-info</font></a>')

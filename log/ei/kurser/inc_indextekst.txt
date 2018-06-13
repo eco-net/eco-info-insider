@@ -1,0 +1,16 @@
+<table width="100%" border="0" cellspacing="0" cellpadding="0" background="/shared/graphics/spacer.gif">
+<tr> 
+<td colspan="2" class="contentHeader1">Kurser og Uddannelser</td>
+</tr>
+<tr> 
+<td background="/shared/graphics/layout/dots_horz.gif" height="1" colspan="2"><img src="/shared/graphics/spacer.gif" width="3" height="1"></td>
+</tr>
+<tr> 
+<td width="66%" valign="top">
+<p>
+Øko-info's kursuskalender indeholder kurser og uddannelser, der omhandler bæredygtig udvikling eller arbejder seriøst med bæredygtighedstanken som et grundlæggende element i det værdisæt, kurset eller uddannelsen baserer sig på.<br>Her er nogle smagsprøver:
+</p>
+</td>
+<td width="34%">&nbsp;</td>
+</tr>
+</table>

@@ -1,0 +1,12 @@
+document.write('<option value="0" selected>&lt;V&aelig;lg&gt;</option>');
+document.write('<option value="339">Aktioner / demonstrationer / kampagner</option>');
+document.write('<option value="335">Generalforsamlinger / årsmøder</option>');
+document.write('<option value="340">Kultur-, musik- og fest-arrangementer</option>');
+document.write('<option value="29">Kurser / workshops</option>');
+document.write('<option value="20">Markeder / udstillinger / messer</option>');
+document.write('<option value="151">Naturture med guide</option>');
+document.write('<option value="334">Receptioner / åbenthus-arrangementer</option>');
+document.write('<option value="17">Seminarer / konferencer / træf</option>');
+document.write('<option value="18">Tema- og debatmøder / foredrag</option>');
+document.write('<option value="157">Ture / ekskursioner</option>');
+document.write('<option value="273">TV- og radioprogrammer</option>');

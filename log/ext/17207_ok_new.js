@@ -1,0 +1,2 @@
+document.write('<font style="font-size:larger"><b><a href="http://www.eco-info.dk/ok/detail.asp?id=17207&count=1&sektion1=dgs&recid1=17207&recname1=Københavns Cykeltaxi ApS&offset=0" target="_blank">Prøv en de-luxe Cykeltaxi</a></b></font><br>21. september 2003 | København K<br><br>')
+document.write('<a href="http://www.eco-info.dk" target="_blank"><font style="color: #999999">Leveret af Øko-info</font></a>')

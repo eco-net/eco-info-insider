@@ -1,0 +1,29 @@
+a:link {  
+	text-decoration: none; 
+	color: #666632
+}
+
+a:active { 
+	 text-decoration: underline;
+	 color: #666632
+}
+
+a:visited {
+	 text-decoration: none; 
+	 color: #666632
+}
+
+a:hover {
+	color: #666632; 
+	text-decoration: underline
+}
+
+
+BODY {
+	background-color: #FAFAF4
+}
+
+BODY, TABLE, TD {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}

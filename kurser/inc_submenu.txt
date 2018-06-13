@@ -1,0 +1,5 @@
+'IF LEN(request.cookies("eiorgid"))>0 THEN 
+	'response.write "<center><img src=""/shared/graphics/spacer.gif"" width=""5"" height=""10""><a href=""/kurser/list.asp"">Kurser</a> | <a href=""/udd/list.asp?valid=0"">Uddannelser</a></center>"
+'ELSE
+	'response.write "<br>"
+'END IF

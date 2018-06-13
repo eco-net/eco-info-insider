@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_rsMail" value="name:id;datatype:int,name:username;datatype:varchar,name:password;datatype:varchar,name:orgid;datatype:int,name:email;datatype:varchar,name:fromfmp;datatype:smallint,name:userlevel;datatype:smallint" />
+</info>

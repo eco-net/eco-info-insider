@@ -1,0 +1,111 @@
+/*grøn:515C31, lys grøn:EFFCD5, rød:A63829, mørk blå:203C63, lys blå:37657C */
+/*HTML*/
+body {
+	font-family: Verdana, Geneva, Arial, helvetica, sans-serif;
+	font-size: 11px;
+	background-color: #EFFCD5;
+}
+
+td {
+	font-family: Verdana, Geneva, Arial, helvetica, sans-serif;
+	font-size: 11px;
+}
+
+th {
+	font-family: Verdana, Geneva, Arial, helvetica, sans-serif;
+	font-size: 11px;
+}
+a:link {
+	text-decoration: none;
+	color: #203C63;
+}
+a:visited {
+	text-decoration: none;
+	color: #203C63;
+}
+a:active {
+	text-decoration: none;
+	color: #203C63;
+}
+a:hover {
+	text-decoration: none;
+	color: #A63829;
+}
+/*HEADER*/
+.headermenu {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #ffffff;
+	font-style: normal;
+	font-weight: bold;
+}
+.headermenu td{
+	background-color: #A63829;
+	background-image: url(/designtest/green-adds/images/menu-bg.gif);
+}
+.headermenu td:hover{
+	background-color: #515C31;
+	background-image: url(/designtest/green-adds/images/menu-bg-hover.gif);
+}
+.headermenu a:link{
+	text-decoration: none;
+	color: #203C63;
+}
+.headermenu a:hover{
+	text-decoration: none;
+	color: #A63829;
+}
+.headermenu a:visited{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+.headermenu a:active{
+	text-decoration: none;
+	color: #000000;
+}
+/*FOOTER*/
+.footer {
+	font-size: 9px;
+}
+/*FORMS*/
+.searchbox {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	height: 15px;
+	width: 150px;
+}
+.combobox {
+	height: 20px;
+	width: 155px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+.submitbutton {
+	height: 20px;
+	width: 80px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+/*TEXT*/
+.tag1 {	color: #A63829;	font-size: 18px;}
+.tag2 {	color: #5C832F;	font-size: 16px;}
+.tag3 {	color: #5C832F;	font-size: 14px;}
+.tag4 {	color: #5C832F;	font-size: 12px;}
+.tag5 {	color: #5C832F;	font-size: 11px;}
+.tag6 {	color: #5C832F;	font-size: 10px;}
+.big {
+	font-size: 14px;
+	font-weight: bold;
+	color: #A63829;
+}
+.bigblack {
+	font-size: 14px;
+	font-weight: bold;
+	color: #000000;
+}
+
+.listheader {
+	font-size: 12px;
+	font-weight: bold;
+	color: #A63829;
+}

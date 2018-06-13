@@ -1,0 +1,20 @@
+<table width="388" border="0" cellspacing="0" cellpadding="0">
+<tr> 
+<td><img src="/log/bu/home/branding/world_2_1.gif" width="258" height="200"></td>
+<td valign="top" class="homeBigbox"> 
+<table width="100%" border="0" cellspacing="0" cellpadding="7">
+<tr> 
+<td class="home"><span class="homeHeader">Var Verdenstopmødet om Bæredygtig Udvikling en succes?</span><br>
+<br><a href="http://www.baeredygtigudvikling.nu/hvad/international/fn/rio+10.asp">...Læs resultater og kommentarer her...</a><br>
+<br>
+
+<br>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr> 
+<td height="1" colspan="3"><img src="/shared/graphics/spacer.gif" width="3" height="1"></td>
+</tr>
+</table>

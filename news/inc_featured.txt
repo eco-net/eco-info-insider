@@ -1,0 +1,21 @@
+<table width="388" border="0" cellspacing="0" cellpadding="16" name="Listview">
+<tr> 
+<td> 
+<p class="contentHeader1">Nyt fra Økologien:</p>
+<ul>
+<li><a href="/news/detail.asp?id=800"><span class="listHeader">Dolor sit amet, consectetuer adipiscin Dolor sit amet, consectetuer adipiscin</span></a><br>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
+euismod tincidunt ut laoreet dolore magn</li>
+<li><a href="/news/detail.asp?id=800"><span class="listHeader">Dolor sit amet, consectetuer adipiscin</span></a><br>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
+euismod tincidunt ut laoreet dolore magn</li>
+<li><a href="/news/detail.asp?id=800"><span class="listHeader">Dolor sit amet, consectetuer adipiscin</span></a><br>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
+euismod tincidunt ut laoreet dolore magn</li>
+<li><a href="/news/detail.asp?id=800"><span class="listHeader">Dolor sit amet, consectetuer adipiscin</span></a><br>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
+euismod tincidunt ut laoreet dolore magn </li>
+</ul>
+</td>
+</tr>
+</table>

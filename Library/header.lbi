@@ -1,0 +1,54 @@
+
+<table width="750" border="0" cellspacing="0" cellpadding="0" name="Header">
+<tr> 
+<td valign="top" rowspan="3"><a href="/index.asp"><img src="/shared/graphics/logo.gif" width="180" height="33" border="0"></a> 
+<table width="180" border="0" cellpadding="0" cellspacing="0" align="center">
+<tr>
+<td width="8"><br>
+</td>
+<td class="sitetag"> Registrering af og med gr&oslash;nne gr&aelig;sr&oslash;dder, NGO'er, foreninger, firmaer m.fl.<br>
+</td>
+<td width="8"><br>
+</td>
+</tr>
+</table>
+</td>
+<!--
+<td valign="top" width="1"><br>
+</td>
+-->
+<td height="17" align="right" colspan="4">
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td align="left"><img src="/shared/graphics/logo2.gif" width="21" height="16"></td>
+<td align="right"> <a href="/home/index.asp">Forside</a> | <a href="http://www.eco-info.dk" target="_blank">&Oslash;ko-info</a> 
+| <a href="/home/about_1.asp">Om Øko-info Insider</a> | <a href="/home/searching.asp">Kom 
+i gang</a> </td>
+</tr>
+</table>
+</td>
+</tr>
+<tr> 
+<td valign="top" rowspan="2" width="1" background="/shared/graphics/layout/dots_vert.gif"><br>
+</td>
+<td background="/shared/graphics/layout/dots_horz.gif" height="1" colspan="3"><img src="/shared/graphics/spacer.gif" width="3" height="1"></td>
+</tr>
+<tr> 
+<td width="388" height="64"> 
+<div align="center">
+</div>
+</td>
+<td background="/shared/graphics/layout/dots_vert.gif" width="1"><br>
+</td>
+<td width="180" align="center" valign="top" background="/shared/graphics/layout/search_bkgrd.gif"> 
+<table width="150" border="0" cellspacing="0" cellpadding="0" background="/shared/graphics/spacer.gif">
+<tr> 
+<td>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+</table>

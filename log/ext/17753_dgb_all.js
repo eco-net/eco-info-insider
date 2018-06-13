@@ -1,0 +1,2 @@
+document.write('<font style="font-size:larger"><b><a href="http://www.eco-info.dk/dgb/detail.asp?id=17753&count=1&sektion1=dgs&recid1=17753&recname1=EcoAdvise & Communication&offset=#nr#" target="_blank">Grønlands internationale forpligtelser</a></b></font>Rapport om Grønlands opfyldelse af en række internationale "grønne" konventioner og aftaler (61 sider)<br><br>')
+document.write('<a href="http://www.eco-info.dk" target="_blank"><font style="color:#999999">Leveret af Øko-info</font></a>')

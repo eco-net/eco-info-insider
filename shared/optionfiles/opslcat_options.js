@@ -1,0 +1,10 @@
+document.write('<option value="0" selected>&lt;V&aelig;lg&gt;</option>');
+document.write('<option value="9">andet</option>');
+document.write('<option value="6">arbejde</option>');
+document.write('<option value="4">bolig</option>');
+document.write('<option value="5">byggeri</option>');
+document.write('<option value="3">bytte</option>');
+document.write('<option value="1">køb</option>');
+document.write('<option value="8">kontakt</option>');
+document.write('<option value="2">salg</option>');
+document.write('<option value="7">uddannelse</option>');

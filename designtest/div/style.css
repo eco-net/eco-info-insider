@@ -1,0 +1,50 @@
+.main {
+	width: 962px;
+}
+.header {
+	height: 120px;
+	width: 962px;
+}
+.logo {
+	height: 80px;
+	width: 962px;
+}
+vertnav {
+	height: 40px;
+	width: 962px;
+}
+page {
+	background-color: #ffffff;
+	width: 962px;
+}
+horznavbar {
+	width: 20%;
+}
+breadcrum {
+	font-size: 10px;
+}
+sitename {
+	font-size: 14px;
+	color: red;
+}
+horznav {
+}
+search {
+}
+content {
+	width: 55%;
+}
+leftcontent {
+	width: 0px;
+}
+rightcontent {
+	width: 0px;
+}
+rightcol {
+	width: 20%;
+}
+
+footer {
+	height: 60px;
+	width: 960px;
+}

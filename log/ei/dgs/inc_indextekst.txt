@@ -1,0 +1,22 @@
+<table width="100%" border="0" cellspacing="0" cellpadding="0" background="/shared/graphics/spacer.gif">
+<tr> 
+<td colspan="2" class="contentHeader1">De Grønne Sider</td>
+</tr>
+<tr> 
+<td background="/shared/graphics/layout/dots_horz.gif" height="1" colspan="2"><img src="/shared/graphics/spacer.gif" width="3" height="1"></td>
+</tr>
+<tr> 
+<td width="66%" valign="top">
+<p>
+Heldigvis sker der utroligt meget indenfor bæredygtighed og økologi i Danmark i disse år, hvilket også afspejles i, at De Grønne Sider indeholder over 2200 registreringer.<br>
+Den bedste måde at finde det du leder efter er at bruge vores kategori- og emneordsregistre, eller blot søge på navnet.<br>
+<br>
+For de interesserede har vi valgt at beholde registreringen af de mange organisationer der lukker som en konsekvens af regeringens politik. Klik på linket i højre spalte, og se de hidtidige konsekvenser.<br>
+<br>
+Her er nogle af de ramte...<br>
+
+</p>
+</td>
+<td width="34%">&nbsp;</td>
+</tr>
+</table>

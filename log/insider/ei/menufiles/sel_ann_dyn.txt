@@ -1,0 +1,31 @@
+response.write "<option value=""0"">&lt;V&aelig;lg&gt;</option>"&_
+"<option value=""22"""
+IF 22=cursel THEN response.write " selected "
+response.write ">Artikler</option>"&_
+"<option value=""16"""
+IF 16=cursel THEN response.write " selected "
+response.write ">Bæredygtig Udvikling</option>"&_
+"<option value=""13"""
+IF 13=cursel THEN response.write " selected "
+response.write ">Danida</option>"&_
+"<option value=""9"""
+IF 9=cursel THEN response.write " selected "
+response.write ">Det Økologiske Råd</option>"&_
+"<option value=""15"""
+IF 15=cursel THEN response.write " selected "
+response.write ">FN</option>"&_
+"<option value=""21"""
+IF 21=cursel THEN response.write " selected "
+response.write ">Juleideer</option>"&_
+"<option value=""12"""
+IF 12=cursel THEN response.write " selected "
+response.write ">Lokal Agenda 21-kontakter</option>"&_
+"<option value=""20"""
+IF 20=cursel THEN response.write " selected "
+response.write ">Pakkespil</option>"&_
+"<option value=""23"""
+IF 23=cursel THEN response.write " selected "
+response.write ">Publikationer</option>"&_
+"<option value=""19"""
+IF 19=cursel THEN response.write " selected "
+response.write ">Stiftelsen Idébanken i Norge</option>"

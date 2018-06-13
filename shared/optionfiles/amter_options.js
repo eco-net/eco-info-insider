@@ -1,0 +1,15 @@
+document.write('<option value="0">&lt;V&aelig;lg&gt;</option>');
+document.write('<option value="70">Århus amt</option>');
+document.write('<option value="40">Bornholms amt</option>');
+document.write('<option value="20">Frederiksborg amt</option>');
+document.write('<option value="42">Fyns amt</option>');
+document.write('<option value="13">Københavns amt</option>');
+document.write('<option value="80">Nordjyllands amt</option>');
+document.write('<option value="55">Ribe amt</option>');
+document.write('<option value="65">Ringkøbing amt</option>');
+document.write('<option value="25">Roskilde amt</option>');
+document.write('<option value="50">Sønderjyllands amt</option>');
+document.write('<option value="35">Storstrøms amt</option>');
+document.write('<option value="60">Vejle amt</option>');
+document.write('<option value="30">Vestsjællands amt</option>');
+document.write('<option value="76">Viborg amt</option>');

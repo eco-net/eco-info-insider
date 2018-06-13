@@ -1,0 +1,54 @@
+Til orientering!
+
+Du/I modtager denne mail, fordi vi har lagt arrangementet 
+"#titel#" 
+i Øko-kalenderen på portalen Øko-info - http://www.eco-info.dk,
+tilknyttet stamkortet for #org#.
+
+Du/I kan redigere de registrerede oplysninger ved at logge ind på 
+http://www.eco-info.dk med nedenstående brugeroplysninger:
+
+Brugernavn: #username#
+Adgangskode: #password#
+
+
+------------------------------------
+LINKS TIL BRUG PÅ EGEN HJEMMESIDE
+------------------------------------
+Denne adresse kan lægges på egen site, og viser arrangementet
+på Øko-info:
+http://www.eco-info.dk/ok/detail.asp?id=#id#
+
+Denne adresse kan lægges på egen site, og viser alle dine/jeres
+arrangementer på Øko-info:
+http://www.eco-info.dk/ok/list.asp?orgid=#orgid#
+
+Som du måske ved, kan du/I også integrerer oplysninger fra Øko-info
+på egen hjemmeside. Kontakt os for nærmere information og hjælp med
+at lave det.
+
+Er du/I i tvivl om noget eller har du/I konstruktiv kritik og 
+gode ideer, er du/I velkommen til at kontakte os på 
+mailto:eco-net@eco-net.dk eller tlf 6224 4324.
+
+
+------------------------------------
+LINKER DU/I TIL ØKO-INFO?
+------------------------------------
+Med over 6000 links til det økologiske Danmark, er Øko-info den mest
+omfattende internet-guide på området. 
+Vi scanner løbende relevante tidsskrifter, aviser og andre medier, 
+modtager dagligt pressemateriale og mange organisationer ligger selv 
+data på siten, så du finder således altid up-to-date og relevant 
+information på Øko-info. 
+Fortæl de besøgende på din/jeres site om os.
+
+
+Med venlig hilsen
+Lars Myrthu-Nielsen
+Sekretariatsleder
+Netværket for økologisk folkeoplysning og praksis - Øko-net
+
+http://www.eco-net.dk
+http://www.eco-info.dk
+http://www.bu.dk

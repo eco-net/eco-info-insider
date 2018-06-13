@@ -1,0 +1,138 @@
+/*style2: bordeaux:723153, blå:6A82AE, lys blå:E9EFF8, grøn:61793B, brun:F8B972, rød:F64501, mørk rød:E01300 */
+
+/*HTML*/
+body {
+	font-family: Verdana, Geneva, Arial, helvetica, sans-serif;
+	font-size: 11px;
+	background-color: #E9EFF8;
+}
+
+td {
+	font-family: Verdana, Geneva, Arial, helvetica, sans-serif;
+	font-size: 11px;
+}
+
+th {
+	font-family: Verdana, Geneva, Arial, helvetica, sans-serif;
+	font-size: 11px;
+}
+a:link {
+	text-decoration: none;
+	color: #6A82AE;
+}
+a:visited {
+	text-decoration: none;
+	color: #6A82AE;
+}
+a:active {
+	text-decoration: none;
+	color: #6A82AE;
+}
+a:hover {
+	color: #61793B;
+	text-decoration: none;
+}
+/*HEADER*/
+.headermenu {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #ffffff;
+	font-style: normal;
+	font-weight: bold;
+}
+.headermenu td{
+	background-color: #6A82AE;
+	background-image: url(/designtest/bu/images/menu-bg.gif);
+}
+.headermenu td:hover{
+	background-color: #FF11A5;
+	background-image: url(/designtest/bu/images/menu-bg-hover.gif);
+}
+.headermenu a:link{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.headermenu a:hover{
+	color: #37657C;
+}
+.headermenu a:visited{
+	color: #FFFFFF;
+}
+.headermenu a:active{
+	color: #FFFFFF;
+	background-color: #000000;
+}
+/*FOOTER*/
+.footer {
+	font-size: 9px;
+}
+/*NAVIGATION*/
+.navmenu {
+	font-size: 12px;
+	font-weight: bold;
+	color: #61793B;
+}
+.navmenu a:link{
+	color: #61793B;
+	text-decoration: none;
+}
+.navmenu a:visited{
+	color: #61793B;
+	text-decoration: none;
+}
+.navmenu a:hover{
+	color: #6A82AE;
+	text-decoration: none;
+	font-size: 12px;
+}
+.navmenu a:active{
+	color: #61793B;
+	text-decoration: none;
+}
+/*FORMS*/
+.searchbox {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	height: 15px;
+	width: 150px;
+}
+.combobox {
+	height: 20px;
+	width: 155px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+.submitbutton {
+	height: 20px;
+	width: 80px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+/*TEXT*/
+.tag1 {	color: #A63829;	font-size: 18px;}
+.tag2 {	color: #5C832F;	font-size: 16px;}
+.tag3 {	color: #5C832F;	font-size: 14px;}
+.tag4 {	color: #5C832F;	font-size: 12px;}
+.tag5 {	color: #5C832F;	font-size: 11px;}
+.tag6 {	color: #5C832F;	font-size: 10px;}
+.big {
+	font-size: 14px;
+	font-weight: bold;
+	color: #723153;
+}
+.bigblack {
+	font-size: 14px;
+	font-weight: bold;
+	color: #000000;
+}
+.bigblue {
+	font-size: 14px;
+	font-weight: bold;
+	color: #6A82AE;
+}
+
+.listheader {
+	font-size: 12px;
+	font-weight: bold;
+	color: #73B209;
+}

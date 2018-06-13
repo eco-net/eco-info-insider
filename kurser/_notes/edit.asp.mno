@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_rsPageData" value="name:id;datatype:int,name:title;datatype:varchar,name:subtitle;datatype:varchar,name:shortdescription;datatype:varchar,name:description;datatype:varchar,name:startdate;datatype:smalldatetime,name:enddate;datatype:smalldatetime,name:starttime;datatype:varchar,name:address;datatype:varchar,name:postnr;datatype:int,name:emailadress;datatype:varchar,name:www;datatype:varchar,name:phone;datatype:varchar,name:validated;datatype:smallint,name:createdate;datatype:smalldatetime,name:modidate;datatype:smalldatetime,name:keywords;datatype:varchar,name:organizers;datatype:varchar,name:status;datatype:smallint,name:creator;datatype:smallint,name:education;datatype:varchar,name:hometime;datatype:varchar,name:school;datatype:varchar" />
+	<infoitem key="UD_rsSubjects" value="name:id;datatype:int,name:name;datatype:varchar" />
+	<infoitem key="UD_rsAllCats" value="name:id;datatype:int,name:name;datatype:varchar" />
+	<infoitem key="UD_rsOrg" value="name:id;datatype:int,name:name;datatype:varchar,name:firstname;datatype:varchar,name:lastname;datatype:varchar" />
+	<infoitem key="UD_rsCategories" value="name:id;datatype:int,name:name;datatype:varchar" />
+</info>

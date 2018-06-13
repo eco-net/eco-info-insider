@@ -1,0 +1,70 @@
+response.write "<option value=""0"">&lt;V&aelig;lg&gt;</option>"&_
+"<option value=""51"""
+IF 51=cursel THEN response.write " selected "
+response.write ">Bæredygtig er mere end dygtig </option>"&_
+"<option value=""34"""
+IF 34=cursel THEN response.write " selected "
+response.write ">Bærekraftigt Norge2032 -debatforum</option>"&_
+"<option value=""53"""
+IF 53=cursel THEN response.write " selected "
+response.write ">Danmark på vej?</option>"&_
+"<option value=""29"""
+IF 29=cursel THEN response.write " selected "
+response.write ">Debatmøde og scenarie-værksted</option>"&_
+"<option value=""57"""
+IF 57=cursel THEN response.write " selected "
+response.write ">EU's miljømæssige og globale ansigt</option>"&_
+"<option value=""65"""
+IF 65=cursel THEN response.write " selected "
+response.write ">FN-tiår for ESD</option>"&_
+"<option value=""40"""
+IF 40=cursel THEN response.write " selected "
+response.write ">Forbrug og fremtid</option>"&_
+"<option value=""58"""
+IF 58=cursel THEN response.write " selected "
+response.write ">Fra Rio til Johannesburg Ti år med miljø og udvikling </option>"&_
+"<option value=""55"""
+IF 55=cursel THEN response.write " selected "
+response.write ">Freedom to pollute</option>"&_
+"<option value=""48"""
+IF 48=cursel THEN response.write " selected "
+response.write ">Gaia Prisen</option>"&_
+"<option value=""64"""
+IF 64=cursel THEN response.write " selected "
+response.write ">Hållbar utveckling i skolan</option>"&_
+"<option value=""35"""
+IF 35=cursel THEN response.write " selected "
+response.write ">Kan det passe</option>"&_
+"<option value=""59"""
+IF 59=cursel THEN response.write " selected "
+response.write ">Konference: Johannesburg + Europa</option>"&_
+"<option value=""63"""
+IF 63=cursel THEN response.write " selected "
+response.write ">Miljø og natur i grundloven</option>"&_
+"<option value=""61"""
+IF 61=cursel THEN response.write " selected "
+response.write ">NGO Forum</option>"&_
+"<option value=""62"""
+IF 62=cursel THEN response.write " selected "
+response.write ">Nobel pris for bæredygtig udvikling</option>"&_
+"<option value=""50"""
+IF 50=cursel THEN response.write " selected "
+response.write ">Ny Kursus-kalender</option>"&_
+"<option value=""38"""
+IF 38=cursel THEN response.write " selected "
+response.write ">Ny strategi for bæredygtig udvikling uden høring?</option>"&_
+"<option value=""42"""
+IF 42=cursel THEN response.write " selected "
+response.write ">Socialdemokratiet indbyder til høring </option>"&_
+"<option value=""33"""
+IF 33=cursel THEN response.write " selected "
+response.write ">Test din viden<br> om energi </option>"&_
+"<option value=""37"""
+IF 37=cursel THEN response.write " selected "
+response.write ">Vejen formes mens vi går</option>"&_
+"<option value=""44"""
+IF 44=cursel THEN response.write " selected "
+response.write ">Vi gav en hånd; skal de nu ha&#8217; sparket?</option>"&_
+"<option value=""60"""
+IF 60=cursel THEN response.write " selected "
+response.write ">Viden om verdens vand</option>"

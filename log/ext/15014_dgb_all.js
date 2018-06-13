@@ -1,0 +1,2 @@
+document.write('<font style="font-size:larger"><b><a href="http://www.eco-info.dk/dgb/detail.asp?id=15014&count=1&sektion1=dgs&recid1=15014&recname1=Café Offside&offset=#nr#" target="_blank">Café Offside - Økologisk</a></b></font>Kort beskrivelse af Café Offsides virksomhed.<br><br>')
+document.write('<a href="http://www.eco-info.dk" target="_blank"><font style="color:#999999">Leveret af Øko-info</font></a>')

@@ -1,0 +1,5 @@
+IF LEN(request.cookies("eiorgid"))>0 THEN 
+	response.write "<img src=""/shared/graphics/spacer.gif"" width=""5"" height=""10""><a href=""index.asp"">Stamdata</a> | <a href=""setup.asp"">Indstillinger</a>"
+ELSE
+	response.write "<br>"
+END IF

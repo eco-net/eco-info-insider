@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_rsP" value="name:orgid;datatype:int,name:catid;datatype:int,name:id;datatype:int,name:name;datatype:varchar,name:city;datatype:varchar,name:shortdescription;datatype:varchar" />
+	<infoitem key="UD_rsPageData" value="name:id;datatype:int,name:title;datatype:varchar,name:shortdescription;datatype:varchar,name:www;datatype:varchar,name:startdate;datatype:smalldatetime,name:enddate;datatype:smalldatetime,name:city;datatype:varchar" />
+</info>

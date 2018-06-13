@@ -1,0 +1,52 @@
+Tak for din tilmelding til Øko-info!
+
+Du/I kan redigere de registrerede oplysninger ved at logge ind på 
+http://www.eco-info.dk med nedenstående brugeroplysninger:
+
+Brugernavn: #username#
+Adgangskode: #password#
+
+
+------------------------------------
+LINKS TIL BRUG PÅ EGEN HJEMMESIDE
+------------------------------------
+Når du/I fremover opretter arrangementer, publikationer, kurser mv. 
+på Øko-info, kan du/I linke til dine/jeres data med nedenstående
+links.
+
+Denne adresse kan lægges på egen site, og viser alle dine/jeres 
+arrangementer på Øko-info:
+http://www.eco-info.dk/ok/list.asp?orgid=#orgid#
+
+Denne adresse kan lægges på egen site, og viser alle dine/jeres 
+publikationer mv. på Øko-info:
+http://www.eco-info.dk/dgb/list.asp?orgid=#orgid#
+
+Som du måske ved, kan du/I også integrerer oplysninger fra Øko-info
+på egen hjemmeside. Kontakt os for nærmere information og hjælp med
+at lave det.
+
+Er du/I i tvivl om noget eller har du/I konstruktiv kritik og 
+gode ideer, er du/I velkommen til at kontakte os på 
+mailto:eco-net@eco-net.dk eller tlf 6224 4324.
+
+
+------------------------------------
+LINKER DU/I TIL ØKO-INFO?
+------------------------------------
+Med over 6000 links til det økologiske Danmark, er Øko-info den mest
+omfattende internet-guide på området. 
+Vi scanner løbende relevante tidsskrifter, aviser og andre medier, 
+modtager dagligt pressemateriale og mange organisationer ligger selv 
+data på siten, så du finder således altid up-to-date og relevant 
+information på Øko-info. Fortæl de besøgende på din/jeres site om os.
+
+
+Med venlig hilsen
+Lars Myrthu-Nielsen
+Sekretariatsleder
+Netværket for økologisk folkeoplysning og praksis - Øko-net
+
+http://www.eco-net.dk
+http://www.eco-info.dk
+http://www.bu.dk

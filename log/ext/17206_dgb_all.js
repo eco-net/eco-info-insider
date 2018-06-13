@@ -1,0 +1,2 @@
+document.write('<font style="font-size:larger"><b><a href="http://www.eco-info.dk/dgb/detail.asp?id=17206&count=1&sektion1=dgs&recid1=17206&recname1=Danmarks Vindkrafthistoriske Samling&offset=#nr#" target="_blank">Vinden som vestjysk energikilde</a></b></font>sdfsdf<br><br>')
+document.write('<a href="http://www.eco-info.dk" target="_blank"><font style="color:#999999">Leveret af Øko-info</font></a>')

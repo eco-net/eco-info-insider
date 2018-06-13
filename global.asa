@@ -1,0 +1,32 @@
+<SCRIPT Language="VBScript" RUNAT="Server">
+SUB Application_OnStart
+
+
+End SUB
+
+SUB Application_OnEnd
+
+End SUB
+SUB Session_OnStart
+
+remote=Request.ServerVariables("REMOTE_ADDR")
+if remote<>"80.160.41.182" then
+Application("online")=Application("online") + 1
+else
+Application("eonline")=Application("eonline") + 1
+end if
+
+End SUB
+
+SUB Session_OnEnd
+
+remote=Request.ServerVariables("REMOTE_ADDR")
+if remote<>"80.160.41.182" then
+Application("online")=Application("online") - 1
+else
+Application("eonline")=Application("eonline") - 1
+end if
+
+End SUB
+
+</SCRIPT>

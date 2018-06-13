@@ -1,0 +1,5 @@
+<tr><td><span class='sidebarHeader'><a href='/dgb/list.asp?dgbcat=11&dgbcatname=Bog' >Spændende udebliv</a></span><br>
+EN BOG for dig der elsker at drømme om alt det du ikke når. Matcher de fleste reoler. 2
+<div align='center'><br><a href='/dgb/list.asp?dgbcat=11&dgbcatname=Bog' ><img src='/log/ei/ads/jytte_2.jpg' height='90' width='128' border='0'></a></div>
+<br><br>
+</td></tr>

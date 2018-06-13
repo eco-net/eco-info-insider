@@ -1,0 +1,7 @@
+IF LEN(request.cookies("eiuserid"))>0 THEN 
+	response.write "<center>"
+	response.write "<img src=""/shared/graphics/spacer.gif"" width=""5"" height=""10""><a href=""list.asp"">Oversigt</a> | <a href=""new.asp"">Opret Nyhed</a>"
+	response.write "</center>"
+ELSE
+	response.write "<br>"
+END IF

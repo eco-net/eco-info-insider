@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_rsPagedata" value="name:name;datatype:varchar,name:firstname;datatype:varchar,name:lastname;datatype:varchar" />
+	<infoitem key="UD_rsPageData" value="name:Artikel_ID;datatype:int,name:CreateDate;datatype:smalldatetime,name:DeleteDate;datatype:smalldatetime,name:Header;datatype:varchar,name:ShortDescription;datatype:varchar,name:Country_ID;datatype:smallint,name:Medarbejder_ID;datatype:int,name:FileName;datatype:varchar,name:Content;datatype:varchar,name:StartDate;datatype:smalldatetime,name:EndDate;datatype:smalldatetime,name:Approved;datatype:tinyint,name:Sektion_ID;datatype:smallint,name:ArtikelCategory_ID;datatype:int,name:img_id;datatype:int,name:linktext;datatype:varchar,name:FileName2;datatype:varchar,name:FileName3;datatype:varchar,name:linktext2;datatype:varchar,name:linktext3;datatype:varchar,name:maker;datatype:varchar,name:Tema_ID;datatype:int,name:create_date;datatype:smalldatetime,name:img_id2;datatype:int,name:ID;datatype:int,name:artikel_id;datatype:int,name:newwin;datatype:smallint,name:busite;datatype:smallint,name:econetsite;datatype:smallint" />
+	<infoitem key="UD_rsCat" value="name:ArtikelCategory_ID;datatype:int,name:Name;datatype:varchar,name:Site_ID;datatype:int,name:Orden;datatype:int,name:description;datatype:varchar" />
+	<infoitem key="UD_rsTema" value="name:id;datatype:int,name:name;datatype:varchar" />
+</info>

@@ -1,0 +1,1 @@
+<a href='http://www.bu.dk' target='_blank'><img src='/log/ei/ads/bu_1.jpg' width='388' height='64' border='0'></a>

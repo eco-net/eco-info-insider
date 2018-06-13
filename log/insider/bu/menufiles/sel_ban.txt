@@ -1,0 +1,6 @@
+<option value="0">&lt;V&aelig;lg&gt;</option>
+<option value="1">Dummy 1</option>
+<option value="3">Dummy 2</option>
+<option value="4">Dummy 3</option>
+<option value="5">Dummy 4</option>
+<option value="6">Phønix</option>

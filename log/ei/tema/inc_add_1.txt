@@ -1,0 +1,5 @@
+<%
+response.write "<tr><td><span class='sidebarHeader'><a href='http://www.um.dk/danida/johannesburg2002/' >Danida</a></span><br>" &_
+	"Danidas hjemmeside er rettet mod undervisning i ungdomsuddannelserne<div align='center'><br><a href='http://www.um.dk/danida/johannesburg2002/' ><img src='/log/ei/ads/2002udd-logo2002-menu.jpg' height='105' width='99' border='0'></a></div>" &_
+	"<br><br></td></tr>"
+%>

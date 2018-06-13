@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_rsCategories" value="name:id;datatype:int,name:name;datatype:varchar" />
+	<infoitem key="UD_rsSubjects" value="name:id;datatype:int,name:name;datatype:varchar" />
+</info>

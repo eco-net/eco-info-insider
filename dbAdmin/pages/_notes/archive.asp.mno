@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_rsSaved" value="name:id;datatype:INTEGER,name:name;datatype:LONGCHAR,name:code;datatype:LONGCHAR,name:isLink;datatype:BYTE,name:objecttype;datatype:BYTE,name:category;datatype:LONGCHAR,name:Description;datatype:LONGCHAR,name:logtime;datatype:DATETIME" />
+</info>

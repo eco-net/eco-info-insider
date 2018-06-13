@@ -1,0 +1,13 @@
+response.write "<option value=""0"">&lt;V&aelig;lg&gt;</option>"&_
+"<option value=""9"""
+IF 9=cursel THEN response.write " selected "
+response.write ">dor_1.gif</option>"&_
+"<option value=""12"""
+IF 12=cursel THEN response.write " selected "
+response.write ">Lokal Agenda 21-kontakter</option>"&_
+"<option value=""2"""
+IF 2=cursel THEN response.write " selected "
+response.write ">Spændende udebliv</option>"&_
+"<option value=""4"""
+IF 4=cursel THEN response.write " selected "
+response.write ">Stormfulde højder</option>"

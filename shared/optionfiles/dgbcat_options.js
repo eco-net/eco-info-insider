@@ -1,0 +1,16 @@
+document.write('<option value="0" selected>&lt;V&aelig;lg&gt;</option>');
+document.write('<option value="182">Årbog</option>');
+document.write('<option value="165">Artikel</option>');
+document.write('<option value="11">Bog</option>');
+document.write('<option value="297">CD-medier</option>');
+document.write('<option value="333">Emneorienterede hjemmesider</option>');
+document.write('<option value="234">Film, video</option>');
+document.write('<option value="12">Hæfte, pjece, folder</option>');
+document.write('<option value="294">Internet udgivelse</option>');
+document.write('<option value="359">Miljø- og naturtidsskrifter - lokale</option>');
+document.write('<option value="360">Miljø- og naturtidsskrifter - nationale</option>');
+document.write('<option value="307">Radio / TV</option>');
+document.write('<option value="73">Rapport</option>');
+document.write('<option value="235">Spil</option>');
+document.write('<option value="164">Tema-nummer</option>');
+document.write('<option value="13">Tidsskrifter - andre</option>');

@@ -1,0 +1,4 @@
+<tr><td><span class='sidebarHeader'><a href='#'>DanmarksDeklarationen4</a></span><br>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+<div align='center'><img src='/log/ei/ads/jytte_1.jpg' height='90' width='128' border='0'></div>
+</td></tr>

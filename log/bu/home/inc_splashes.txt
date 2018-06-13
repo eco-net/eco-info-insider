@@ -1,0 +1,54 @@
+           
+<table width="388" border="0" cellspacing="0" cellpadding="0">
+<tr> 
+<td><img src="/log/bu/home/splashes/dygtig.gif" width="128" height="90"></td>
+<td rowspan="2" background="/shared/graphics/layout/dots_vert.gif" width="1"><br>
+</td>
+<td><img src="/log/bu/home/splashes/fn_logo_wssd.jpg" width="128" height="90"></td>
+<td rowspan="2" background="/shared/graphics/layout/dots_vert.gif" width="1"><br>
+</td>
+<td><img src="/log/bu/home/splashes/holdbar.jpg" width="128" height="90"></td>
+</tr>
+<tr> 
+<td valign="top"> 
+<table width="100%" border="0" cellspacing="5" cellpadding="5">
+<tr> 
+<td class="home"><span class="homeHeader">Bæredygtig er mere end dygtig </span><br>
+&#8211; et debathæfte om folkeoplysning og uddannelse for bæredygtig udvikling.<br>
+<br>
+Nu også på engelsk.
+<br>
+<br>
+<a href="http://www.bæredygtigudvikling.nu/aktuelt/detail.asp?id=733" >Læs mere...</a>
+</td>
+</tr>
+</table>
+</td>
+<td valign="top"> 
+<table width="100%" border="0" cellspacing="0" cellpadding="5">
+<tr> 
+<td class="home"><span class="homeHeader">FN-tiår for ESD</span><br>
+FN har i slutningen af 2002, efter Johannesburg-topmødet, udnævnet et ti-år for uddannelse for bæredygtig udvikling - United Nations Decade of Education for Sustainable Development [ESD 2005-2015]<br>
+Øko-net vil frem mod 2005 løbende her på portalen følge og indgå i forberedelserne af tiåret.
+<br>
+<br>
+<a href="http://www.baeredygtigudvikling.nu/uddannelse/index.asp" >L&aelig;s mere...</a>
+</td>
+</tr>
+</table>
+</td>
+<td valign="top"> 
+<table width="100%" border="0" cellspacing="0" cellpadding="5">
+<tr> 
+<td class="home">
+<span class="homeHeader">Hållbar utveckling i skolan</span><br>
+- er titlen på en fyldig svensk rapport fra Skoleverket om uddannelse for bæredygtig udvikling. Publikationen kan downloades fra Skoleverkets hjemmeside.
+<br>
+<br>
+<a href="http://www.skolverket.se" >L&aelig;s mere...</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>

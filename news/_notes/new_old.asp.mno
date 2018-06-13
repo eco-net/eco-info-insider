@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_rsPagedata" value="name:name;datatype:varchar,name:firstname;datatype:varchar,name:lastname;datatype:varchar" />
+	<infoitem key="UD_rsCat" value="name:ArtikelCategory_ID;datatype:int,name:Name;datatype:varchar,name:Site_ID;datatype:int,name:Orden;datatype:int" />
+	<infoitem key="UD_rsTema" value="name:id;datatype:int,name:name;datatype:varchar" />
+</info>

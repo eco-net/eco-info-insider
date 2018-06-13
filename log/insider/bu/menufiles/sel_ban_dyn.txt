@@ -1,0 +1,16 @@
+response.write "<option value=""0"">&lt;V&aelig;lg&gt;</option>"&_
+"<option value=""1"""
+IF 1=cursel THEN response.write " selected "
+response.write ">Dummy 1</option>"&_
+"<option value=""3"""
+IF 3=cursel THEN response.write " selected "
+response.write ">Dummy 2</option>"&_
+"<option value=""4"""
+IF 4=cursel THEN response.write " selected "
+response.write ">Dummy 3</option>"&_
+"<option value=""5"""
+IF 5=cursel THEN response.write " selected "
+response.write ">Dummy 4</option>"&_
+"<option value=""6"""
+IF 6=cursel THEN response.write " selected "
+response.write ">Phønix</option>"

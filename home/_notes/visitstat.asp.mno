@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_rsStat" value="name:theCount;datatype:int" />
+	<infoitem key="UD_rsCount" value="name:id;datatype:int,name:homeindex;datatype:int,name:ehomeindex;datatype:int,name:dgslist;datatype:int,name:edgslist;datatype:int,name:dgblist;datatype:int,name:edgblist;datatype:int,name:oklist;datatype:int,name:eoklist;datatype:int,name:kurlist;datatype:int,name:ekurlist;datatype:int,name:uddlist;datatype:int,name:euddlist;datatype:int,name:artlist;datatype:int,name:eartlist;datatype:int,name:users;datatype:int,name:eusers;datatype:int" />
+</info>

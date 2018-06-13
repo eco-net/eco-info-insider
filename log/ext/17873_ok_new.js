@@ -1,0 +1,3 @@
+document.write('<font style="font-size:larger"><b><a href="http://www.eco-info.dk/ok/detail.asp?id=17873&count=1&sektion1=dgs&recid1=17873&recname1=Danmarksrejser&offset=0" target="_blank">Fugletur til Tipperne og Skjern Enge</a></b></font><br>30. april 2004 til 2. maj 2004 | Ulfborg<br><br>')
+document.write('<font style="font-size:larger"><b><a href="http://www.eco-info.dk/ok/detail.asp?id=17873&count=1&sektion1=dgs&recid1=17873&recname1=Danmarksrejser&offset=1" target="_blank">Rundt i Ådalen</a></b></font><br>20 til 23. maj 2004 | Nibe<br><br>')
+document.write('<a href="http://www.eco-info.dk" target="_blank"><font style="color: #999999">Leveret af Øko-info</font></a>')

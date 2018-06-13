@@ -1,0 +1,16 @@
+response.write "<option value=""0"">&lt;V&aelig;lg&gt;</option>"&_
+"<option value=""15"""
+IF 15=cursel THEN response.write " selected "
+response.write ">Skal et topmøde give resultater, må jorden gødes på forhånd.</option>"&_
+"<option value=""16"""
+IF 16=cursel THEN response.write " selected "
+response.write ">Var Verdenstopmødet om Bæredygtig Udvikling en succes?</option>"&_
+"<option value=""7"""
+IF 7=cursel THEN response.write " selected "
+response.write ">Velkommen til Bæredygtig Udvikling - i nye klæder</option>"&_
+"<option value=""8"""
+IF 8=cursel THEN response.write " selected "
+response.write ">Velkommen til Bæredygtig Udvikling<br> - i ny form</option>"&_
+"<option value=""9"""
+IF 9=cursel THEN response.write " selected "
+response.write ">Verdenstopmødet</option>"

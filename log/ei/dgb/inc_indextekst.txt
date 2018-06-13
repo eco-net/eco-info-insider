@@ -1,0 +1,19 @@
+<table width="100%" border="0" cellspacing="0" cellpadding="0" background="/shared/graphics/spacer.gif">
+<tr> 
+<td colspan="2" class="contentHeader1">Det Grønne Bibliotek</td>
+</tr>
+<tr> 
+<td background="/shared/graphics/layout/dots_horz.gif" height="1" colspan="2"><img src="/shared/graphics/spacer.gif" width="3" height="1"></td>
+</tr>
+<tr> 
+<td width="66%" valign="top">
+<p>
+I Øko-info's grønne bibliotek bestæber vi os på at registrere alt hvad der rør sig i form af bøger, artikler, radio og TV med videre, indenfor vores område.<br>
+Det er en stor opgave, og vi betragter selv biblioteket som et kompetent udvalg af den tilgængelige viden.<br>
+<br>
+Sommeren er over os, og hvem kunne ikke bruge lidt god og inspirerende læsning til havesæsonen...
+</p>
+</td>
+<td width="34%">&nbsp;</td>
+</tr>
+</table>

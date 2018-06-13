@@ -1,0 +1,737 @@
+<%@LANGUAGE="VBSCRIPT"%> 
+<!--#include virtual="/shared/sqlcheck.asp"-->
+<!--#include virtual="/shared/inc_adm_access.asp" -->
+<!--#include virtual="/Connections/ecoinfo.asp" -->
+<!--#include virtual="/shared/common.asp" -->
+<%if request("valg")<>"" then
+theSQL="UPDATE eiafstem_emne SET chosen=0"
+execCommand(theSQL)
+theSQL="UPDATE eiafstem_emne SET chosen=1 WHERE id=" & request("valg")
+execCommand(theSQL)
+end if 
+%>
+<%
+' *** Edit Operations: declare variables
+
+MM_editAction = CStr(Request("URL"))
+If (Request.QueryString <> "") Then
+  MM_editAction = MM_editAction & "?" & Request.QueryString
+End If
+
+' boolean to abort record edit
+MM_abortEdit = false
+
+' query string to execute
+MM_editQuery = ""
+%>
+<%
+' *** Update Record: set variables
+
+If (CStr(Request("MM_update")) <> "" And CStr(Request("MM_recordId")) <> "") Then
+
+  MM_editConnection = MM_ecoinfo_STRING
+  MM_editTable = "eiafstem_emne"
+  MM_editColumn = "id"
+  MM_recordId = "" + Request.Form("MM_recordId") + ""
+  MM_editRedirectUrl = ""
+  MM_fieldsStr  = "name|value|descr|value|forslag|value"
+  MM_columnsStr = "name|',none,''|descr|',none,''|forslag|none,1,0"
+
+  ' create the MM_fields and MM_columns arrays
+  MM_fields = Split(MM_fieldsStr, "|")
+  MM_columns = Split(MM_columnsStr, "|")
+  
+  ' set the form values
+  For i = LBound(MM_fields) To UBound(MM_fields) Step 2
+    MM_fields(i+1) = CStr(Request.Form(MM_fields(i)))
+  Next
+
+  ' append the query string to the redirect URL
+  If (MM_editRedirectUrl <> "" And Request.QueryString <> "") Then
+    If (InStr(1, MM_editRedirectUrl, "?", vbTextCompare) = 0 And Request.QueryString <> "") Then
+      MM_editRedirectUrl = MM_editRedirectUrl & "?" & Request.QueryString
+    Else
+      MM_editRedirectUrl = MM_editRedirectUrl & "&" & Request.QueryString
+    End If
+  End If
+
+End If
+%>
+<%
+' *** Insert Record: set variables
+
+If (CStr(Request("MM_insert")) <> "") Then
+
+  MM_editConnection = MM_ecoinfo_STRING
+  MM_editTable = "eiafstem_emne"
+  MM_editRedirectUrl = ""
+  MM_fieldsStr  = "name2|value|descr2|value"
+  MM_columnsStr = "name|',none,''|descr|',none,''"
+
+  ' create the MM_fields and MM_columns arrays
+  MM_fields = Split(MM_fieldsStr, "|")
+  MM_columns = Split(MM_columnsStr, "|")
+  
+  ' set the form values
+  For i = LBound(MM_fields) To UBound(MM_fields) Step 2
+    MM_fields(i+1) = CStr(Request.Form(MM_fields(i)))
+  Next
+
+  ' append the query string to the redirect URL
+  If (MM_editRedirectUrl <> "" And Request.QueryString <> "") Then
+    If (InStr(1, MM_editRedirectUrl, "?", vbTextCompare) = 0 And Request.QueryString <> "") Then
+      MM_editRedirectUrl = MM_editRedirectUrl & "?" & Request.QueryString
+    Else
+      MM_editRedirectUrl = MM_editRedirectUrl & "&" & Request.QueryString
+    End If
+  End If
+
+End If
+%>
+<%
+' *** Delete Record: declare variables
+
+if (CStr(Request("MM_delete")) <> "" And CStr(Request("MM_recordId")) <> "") Then
+
+  MM_editConnection = MM_ecoinfo_STRING
+  MM_editTable = "eiafstem_emne"
+  MM_editColumn = "id"
+  MM_recordId = "" + Request.Form("MM_recordId") + ""
+  MM_editRedirectUrl = ""
+
+  ' append the query string to the redirect URL
+  If (MM_editRedirectUrl <> "" And Request.QueryString <> "") Then
+    If (InStr(1, MM_editRedirectUrl, "?", vbTextCompare) = 0 And Request.QueryString <> "") Then
+      MM_editRedirectUrl = MM_editRedirectUrl & "?" & Request.QueryString
+    Else
+      MM_editRedirectUrl = MM_editRedirectUrl & "&" & Request.QueryString
+    End If
+  End If
+  
+End If
+%>
+<%
+' *** Update Record: construct a sql update statement and execute it
+
+If (CStr(Request("MM_update")) <> "" And CStr(Request("MM_recordId")) <> "") Then
+
+  ' create the sql update statement
+  MM_editQuery = "update " & MM_editTable & " set "
+  For i = LBound(MM_fields) To UBound(MM_fields) Step 2
+    FormVal = MM_fields(i+1)
+    MM_typeArray = Split(MM_columns(i+1),",")
+    Delim = MM_typeArray(0)
+    If (Delim = "none") Then Delim = ""
+    AltVal = MM_typeArray(1)
+    If (AltVal = "none") Then AltVal = ""
+    EmptyVal = MM_typeArray(2)
+    If (EmptyVal = "none") Then EmptyVal = ""
+    If (FormVal = "") Then
+      FormVal = EmptyVal
+    Else
+      If (AltVal <> "") Then
+        FormVal = AltVal
+      ElseIf (Delim = "'") Then  ' escape quotes
+        FormVal = "'" & Replace(FormVal,"'","''") & "'"
+      Else
+        FormVal = Delim + FormVal + Delim
+      End If
+    End If
+    If (i <> LBound(MM_fields)) Then
+      MM_editQuery = MM_editQuery & ","
+    End If
+    MM_editQuery = MM_editQuery & MM_columns(i) & " = " & FormVal
+  Next
+  MM_editQuery = MM_editQuery & " where " & MM_editColumn & " = " & MM_recordId
+
+  If (Not MM_abortEdit) Then
+    ' execute the update
+    Set MM_editCmd = Server.CreateObject("ADODB.Command")
+    MM_editCmd.ActiveConnection = MM_editConnection
+    MM_editCmd.CommandText = MM_editQuery
+    MM_editCmd.Execute
+    MM_editCmd.ActiveConnection.Close
+
+    If (MM_editRedirectUrl <> "") Then
+      Response.Redirect(MM_editRedirectUrl)
+    End If
+  End If
+
+End If
+%>
+<%
+' *** Insert Record: construct a sql insert statement and execute it
+
+If (CStr(Request("MM_insert")) <> "") Then
+
+  ' create the sql insert statement
+  MM_tableValues = ""
+  MM_dbValues = ""
+  For i = LBound(MM_fields) To UBound(MM_fields) Step 2
+    FormVal = MM_fields(i+1)
+    MM_typeArray = Split(MM_columns(i+1),",")
+    Delim = MM_typeArray(0)
+    If (Delim = "none") Then Delim = ""
+    AltVal = MM_typeArray(1)
+    If (AltVal = "none") Then AltVal = ""
+    EmptyVal = MM_typeArray(2)
+    If (EmptyVal = "none") Then EmptyVal = ""
+    If (FormVal = "") Then
+      FormVal = EmptyVal
+    Else
+      If (AltVal <> "") Then
+        FormVal = AltVal
+      ElseIf (Delim = "'") Then  ' escape quotes
+        FormVal = "'" & Replace(FormVal,"'","''") & "'"
+      Else
+        FormVal = Delim + FormVal + Delim
+      End If
+    End If
+    If (i <> LBound(MM_fields)) Then
+      MM_tableValues = MM_tableValues & ","
+      MM_dbValues = MM_dbValues & ","
+    End if
+    MM_tableValues = MM_tableValues & MM_columns(i)
+    MM_dbValues = MM_dbValues & FormVal
+  Next
+  MM_editQuery = "insert into " & MM_editTable & " (" & MM_tableValues & ") values (" & MM_dbValues & ")"
+
+  If (Not MM_abortEdit) Then
+    ' execute the insert
+    Set MM_editCmd = Server.CreateObject("ADODB.Command")
+    MM_editCmd.ActiveConnection = MM_editConnection
+    MM_editCmd.CommandText = MM_editQuery
+    MM_editCmd.Execute
+    MM_editCmd.ActiveConnection.Close
+
+    If (MM_editRedirectUrl <> "") Then
+      Response.Redirect(MM_editRedirectUrl)
+    End If
+  End If
+
+End If
+%>
+<%
+' *** Delete Record: construct a sql delete statement and execute it
+
+If (CStr(Request("MM_delete")) <> "" And CStr(Request("MM_recordId")) <> "") Then
+
+  ' create the sql delete statement
+  MM_editQuery = "delete from " & MM_editTable & " where " & MM_editColumn & " = " & MM_recordId
+
+  If (Not MM_abortEdit) Then
+    ' execute the delete
+    Set MM_editCmd = Server.CreateObject("ADODB.Command")
+    MM_editCmd.ActiveConnection = MM_editConnection
+    MM_editCmd.CommandText = MM_editQuery
+    MM_editCmd.Execute
+    MM_editCmd.ActiveConnection.Close
+
+    If (MM_editRedirectUrl <> "") Then
+      Response.Redirect(MM_editRedirectUrl)
+    End If
+  End If
+
+End If
+%>
+<%
+set rsAfstem = Server.CreateObject("ADODB.Recordset")
+rsAfstem.ActiveConnection = MM_ecoinfo_STRING
+rsAfstem.Source = "SELECT *  FROM eiafstem_emne"
+rsAfstem.CursorType = 0
+rsAfstem.CursorLocation = 2
+rsAfstem.LockType = 3
+rsAfstem.Open()
+rsAfstem_numRows = 0
+%>
+<%
+Dim rsChosen__MMColParam
+rsChosen__MMColParam = "1"
+if (Application("chose") <> "") then rsChosen__MMColParam = Application("chose")
+%>
+<%
+set rsChosen = Server.CreateObject("ADODB.Recordset")
+rsChosen.ActiveConnection = MM_ecoinfo_STRING
+rsChosen.Source = "SELECT id, name  FROM eiafstem_emne  WHERE chosen = " + Replace(rsChosen__MMColParam, "'", "''") + ""
+rsChosen.CursorType = 0
+rsChosen.CursorLocation = 2
+rsChosen.LockType = 3
+rsChosen.Open()
+rsChosen_numRows = 0
+%>
+<%
+Dim Repeat1__numRows
+Repeat1__numRows = -1
+Dim Repeat1__index
+Repeat1__index = 0
+rsAfstem_numRows = rsAfstem_numRows + Repeat1__numRows
+%>
+<html><!-- #BeginTemplate "/Templates/2cols.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>Ecoinfo</title>
+<!-- #EndEditable --> 
+<script src="/shared/common.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="/shared/styles.css" type="text/css">
+</head>
+<body bgcolor="#FFFFFF" text="#000000" leftmargin="0" topmargin="7" marginwidth="0" marginheight="7">
+<table width="752" border="0" cellspacing="0" cellpadding="0" align="center" name="Pagetable">
+<tr> 
+<td background="/shared/graphics/layout/dots_vert.gif" width="1" valign="top"><img src="/shared/graphics/layout/cover_dots.gif" width="1" height="18"></td>
+<td width="750" valign="top"> 
+<!-- START HEADER -->
+<!-- #BeginLibraryItem "/Library/header.lbi" -->
+<table width="750" border="0" cellspacing="0" cellpadding="0" name="Header">
+<tr> 
+<td valign="top" rowspan="3"><a href="/index.asp"><img src="/shared/graphics/logo.gif" width="180" height="33" border="0"></a> 
+<table width="180" border="0" cellpadding="0" cellspacing="0" align="center">
+<tr>
+<td width="8"><br>
+</td>
+<td class="sitetag"> Registrering af og med gr&oslash;nne gr&aelig;sr&oslash;dder, NGO'er, foreninger, firmaer m.fl.<br>
+</td>
+<td width="8"><br>
+</td>
+</tr>
+</table>
+</td>
+<!--
+<td valign="top" width="1"><br>
+</td>
+-->
+<td height="17" align="right" colspan="4">
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td align="left"><img src="/shared/graphics/logo2.gif" width="21" height="16"></td>
+<td align="right"> <a href="/home/index.asp">Forside</a> | <a href="http://www.eco-info.dk" target="_blank">&Oslash;ko-info</a> 
+| <a href="/home/about_1.asp">Om Øko-info Insider</a> | <a href="/home/searching.asp">Kom 
+i gang</a> | <a href="#" onClick="window.open('/shared/help/help.asp','InsiderHelp','scrollbars=yes,resizable=yes,width=700,height=300');">Hj&aelig;lp</a></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr> 
+<td valign="top" rowspan="2" width="1" background="/shared/graphics/layout/dots_vert.gif"><br>
+</td>
+<td background="/shared/graphics/layout/dots_horz.gif" height="1" colspan="3"><img src="/shared/graphics/spacer.gif" width="3" height="1"></td>
+</tr>
+<tr> 
+<td width="388" height="64"> 
+<div align="center">
+</div>
+</td>
+<td background="/shared/graphics/layout/dots_vert.gif" width="1"><br>
+</td>
+<td width="180" align="center" valign="top" background="/shared/graphics/layout/search_bkgrd.gif"> 
+<table width="150" border="0" cellspacing="0" cellpadding="0" background="/shared/graphics/spacer.gif">
+<tr> 
+<td>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+</table>
+<!-- #EndLibraryItem --><!-- END HEADER -->
+<!-- #BeginEditable "menu" --> 
+<%DIM curtab
+curtab=6
+level1=6
+%>
+<!-- #BeginLibraryItem "/Library/menu.lbi" --><table width="750" border="0" cellspacing="0" cellpadding="0" name="Menu">
+<tr>
+<%
+IF LEN(request.cookies("eiuserid"))=0 THEN 'Organisation eller ikke logget ind
+	'-- tab1 --
+	response.write "<td><img src=""/shared/graphics/menu/stretch.gif"" width=""40"" height=""22"">"
+	IF curtab=1 THEN
+		response.write "<img src=""/shared/graphics/menu/separator_left.gif"" width=""29"" height=""22"">" &_
+			"<a href=""/dgs/index.asp""><img src=""/shared/graphics/menu/dgsu_on.gif"" width=""64"" height=""22"" border=""0""></a>"
+	ELSE
+		response.write "<img src=""/shared/graphics/menu/separator.gif"" width=""29"" height=""22"">" &_
+			"<a href=""/dgs/index.asp""><img src=""/shared/graphics/menu/dgsu_off.gif"" width=""64"" height=""22"" border=""0""></a>"
+	END IF
+	'-- tab2 --
+	IF curtab=2 THEN
+		response.write "<img src=""/shared/graphics/menu/separator_left.gif"" width=""29"" height=""22"">" &_
+			"<a href=""/ok/list.asp""><img src=""/shared/graphics/menu/ok_on.gif"" width=""100"" height=""22"" border=""0""></a>"
+	ELSE
+		IF curtab=1 THEN
+			response.write "<img src=""/shared/graphics/menu/separator_right.gif"" width=""29"" height=""22"">"
+		ELSE
+			response.write "<img src=""/shared/graphics/menu/separator.gif"" width=""29"" height=""22"">"
+		END IF
+		response.write "<a href=""/ok/list.asp""><img src=""/shared/graphics/menu/ok_off.gif"" width=""100"" height=""22"" border=""0""></a>"
+	END IF
+	'-- tab3 --
+	IF curtab=3 THEN
+		response.write "<img src=""/shared/graphics/menu/separator_left.gif"" width=""29"" height=""22"">" &_
+			"<a href=""/dgb/list.asp""><img src=""/shared/graphics/menu/dgb_on.gif"" width=""88"" height=""22"" border=""0""></a>"
+	ELSE
+		IF curtab=2 THEN
+			response.write "<img src=""/shared/graphics/menu/separator_right.gif"" width=""29"" height=""22"">"
+		ELSE
+			response.write "<img src=""/shared/graphics/menu/separator.gif"" width=""29"" height=""22"">"
+		END IF
+		response.write "<a href=""/dgb/list.asp""><img src=""/shared/graphics/menu/dgb_off.gif"" width=""88"" height=""22"" border=""0""></a>"
+	END IF
+	'-- tab 4 --
+	
+	IF curtab=4 THEN
+		response.write "<img src=""/shared/graphics/menu/separator_left.gif"" width=""29"" height=""22"">" &_
+			"<a href=""/kurser/list.asp""><img src=""/shared/graphics/menu/kurser_on.gif"" width=""60"" height=""22"" border=""0""></a>"
+	ELSE
+		IF curtab=3 THEN
+			response.write "<img src=""/shared/graphics/menu/separator_right.gif"" width=""29"" height=""22"">"
+		ELSE
+			response.write "<img src=""/shared/graphics/menu/separator.gif"" width=""29"" height=""22"">"
+		END IF
+		response.write "<a href=""/kurser/list.asp""><img src=""/shared/graphics/menu/kurser_off.gif"" width=""60"" height=""22"" border=""0""></a>"
+	END IF
+	'-- tab 7 --
+	
+	IF curtab=7 THEN
+		response.write "<img src=""/shared/graphics/menu/separator_left.gif"" width=""29"" height=""22"">" &_
+			"<a href=""/art/list.asp""><img src=""/shared/graphics/menu/artikler_on.gif"" width=""60"" height=""22"" border=""0""></a>" &_
+			"<img src=""/shared/graphics/menu/separator_right.gif"" width=""29"" height=""22"">"
+	
+	ELSE
+		IF curtab=4 THEN
+			response.write "<img src=""/shared/graphics/menu/separator_right.gif"" width=""29"" height=""22"">"
+		ELSE
+			response.write "<img src=""/shared/graphics/menu/separator.gif"" width=""29"" height=""22"">"
+		END IF
+		response.write "<a href=""/art/list.asp""><img src=""/shared/graphics/menu/artikler_off.gif"" width=""60"" height=""22"" border=""0""></a>" 
+		response.write "<img src=""/shared/graphics/menu/stretch.gif"" width=""30"" height=""22"">" 
+	END IF
+	response.write "<img src=""/shared/graphics/menu/separator.gif"" width=""30"" height=""22"">" 
+	response.write "<img src=""/shared/graphics/menu/stretch.gif"" width=""133"" height=""22""></td>"
+	
+ELSE 
+'Øko-net sektretariatet
+	'-- tab1 --
+	response.write "<td><img src=""/shared/graphics/menu/stretch.gif"" width=""11"" height=""22"">"
+	IF curtab=1 THEN
+		response.write "<img src=""/shared/graphics/menu/separator_left.gif"" width=""29"" height=""22"">" &_
+			"<a href=""/dgs/index.asp""><img src=""/shared/graphics/menu/dgs_on.gif"" width=""100"" height=""22"" border=""0""></a>"
+	ELSE
+		response.write "<img src=""/shared/graphics/menu/separator.gif"" width=""29"" height=""22"">" &_
+			"<a href=""/dgs/index.asp""><img src=""/shared/graphics/menu/dgs_off.gif"" width=""100"" height=""22"" border=""0""></a>"
+	END IF
+	'-- tab2 --
+	IF curtab=2 THEN
+		response.write "<img src=""/shared/graphics/menu/separator_left.gif"" width=""29"" height=""22"">" &_
+			"<a href=""/ok/list.asp?valid=0""><img src=""/shared/graphics/menu/ok_on.gif"" width=""100"" height=""22"" border=""0""></a>"
+	ELSE
+		IF curtab=1 THEN
+			response.write "<img src=""/shared/graphics/menu/separator_right.gif"" width=""29"" height=""22"">"
+		ELSE
+			response.write "<img src=""/shared/graphics/menu/separator.gif"" width=""29"" height=""22"">"
+		END IF
+		response.write "<a href=""/ok/list.asp?valid=0""><img src=""/shared/graphics/menu/ok_off.gif"" width=""100"" height=""22"" border=""0""></a>"
+	END IF
+	'-- tab3 --
+	IF curtab=3 THEN
+		response.write "<img src=""/shared/graphics/menu/separator_left.gif"" width=""29"" height=""22"">" &_
+			"<a href=""/dgb/list.asp?valid=0""><img src=""/shared/graphics/menu/dgb_on.gif"" width=""88"" height=""22"" border=""0""></a>"
+	ELSE
+		IF curtab=2 THEN
+			response.write "<img src=""/shared/graphics/menu/separator_right.gif"" width=""29"" height=""22"">"
+		ELSE
+			response.write "<img src=""/shared/graphics/menu/separator.gif"" width=""29"" height=""22"">"
+		END IF
+		response.write "<a href=""/dgb/list.asp?valid=0""><img src=""/shared/graphics/menu/dgb_off.gif"" width=""88"" height=""22"" border=""0""></a>"
+	END IF
+	'-- tab 4 --
+	
+	IF curtab=4 THEN
+		response.write "<img src=""/shared/graphics/menu/separator_left.gif"" width=""29"" height=""22"">" &_
+			"<a href=""/kurser/list.asp?valid=0""><img src=""/shared/graphics/menu/kurser_on.gif"" width=""60"" height=""22"" border=""0""></a>"
+	ELSE
+		IF curtab=3 THEN
+			response.write "<img src=""/shared/graphics/menu/separator_right.gif"" width=""29"" height=""22"">"
+		ELSE
+			response.write "<img src=""/shared/graphics/menu/separator.gif"" width=""29"" height=""22"">"
+		END IF
+		response.write "<a href=""/kurser/list.asp?valid=0""><img src=""/shared/graphics/menu/kurser_off.gif"" width=""60"" height=""22"" border=""0""></a>"
+	END IF
+	'-- tab 7 --
+	
+	IF curtab=7 THEN
+		response.write "<img src=""/shared/graphics/menu/separator_left.gif"" width=""29"" height=""22"">" &_
+			"<a href=""/art/list.asp?valid=0""><img src=""/shared/graphics/menu/artikler_on.gif"" width=""60"" height=""22"" border=""0""></a>"
+	ELSE
+		IF curtab=4 THEN
+			response.write "<img src=""/shared/graphics/menu/separator_right.gif"" width=""29"" height=""22"">"
+		ELSE
+			response.write "<img src=""/shared/graphics/menu/separator.gif"" width=""29"" height=""22"">"
+		END IF
+		response.write "<a href=""/art/list.asp?valid=0""><img src=""/shared/graphics/menu/artikler_off.gif"" width=""60"" height=""22"" border=""0""></a>"
+	END IF
+	'-- tab5 --
+	IF curtab=5 THEN
+		response.write "<img src=""/shared/graphics/menu/separator_left.gif"" width=""29"" height=""22"">" &_
+			"<a href=""/news/index.asp""><img src=""/shared/graphics/menu/news_on.gif"" width=""57"" height=""22"" border=""0""></a>"
+	ELSE
+		IF curtab=7 THEN
+			response.write "<img src=""/shared/graphics/menu/separator_right.gif"" width=""29"" height=""22"">"
+		ELSE
+			response.write "<img src=""/shared/graphics/menu/separator.gif"" width=""29"" height=""22"">"
+		END IF
+		response.write "<a href=""/news/index.asp""><img src=""/shared/graphics/menu/news_off.gif"" width=""57"" height=""22"" border=""0""></a>"
+	END IF
+	'-- tab6 --
+	IF curtab=6 THEN
+		response.write "<img src=""/shared/graphics/menu/separator_left.gif"" width=""29"" height=""22"">" &_
+			"<a href=""/admin/ei/tema/functions.asp""><img src=""/shared/graphics/menu/adm_on.gif"" width=""31"" height=""22"" border=""0""></a>" &_
+			"<img src=""/shared/graphics/menu/separator_right.gif"" width=""29"" height=""22"">"
+	ELSE
+		IF curtab=5 THEN
+			response.write "<img src=""/shared/graphics/menu/separator_right.gif"" width=""29"" height=""22"">"
+		ELSE
+			response.write "<img src=""/shared/graphics/menu/separator.gif"" width=""29"" height=""22"">"
+		END IF
+		response.write "<a href=""/admin/ei/tema/functions.asp""><img src=""/shared/graphics/menu/adm_off.gif"" width=""31"" height=""22"" border=""0""></a>" &_
+			"<img src=""/shared/graphics/menu/separator.gif"" width=""29"" height=""22"">"
+	END IF
+	response.write "<img src=""/shared/graphics/menu/stretch.gif"" width=""11"" height=""22""></td>"
+END IF
+%>
+</tr>
+<%IF curtab>0 THEN%>
+<tr><td class="menuBar">
+<%
+SET fs = CreateObject("Scripting.FileSystemObject")
+Set ts=fs.OpenTextFile(Server.mapPath("inc_submenu.txt"))
+execute(ts.ReadAll())
+ts=""
+fs=""
+%>
+</td></tr>
+<%END IF%>
+<tr><td background="/shared/graphics/layout/dots_horz.gif" height="1"><img src="/shared/graphics/spacer.gif" width="3" height="1"></td>
+</tr></table><!-- #EndLibraryItem --><!-- #EndEditable --> 
+<table width="750" border="0" cellspacing="0" cellpadding="0" name="Contentarea">
+<tr> 
+<td width="180" valign="top" name="leftbar"><!-- #BeginEditable "leftbar" --> 
+<!--#include file="inc_leftbar.asp"-->
+<br>
+<!-- #EndEditable --></td>
+<td width="1" background="/shared/graphics/layout/dots_vert.gif"><br>
+</td>
+<td width="569" valign="top" height="100%" name="maincontent"> 
+<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+<tr> 
+<td valign="top"> <!-- #BeginEditable "maincontent" --> <br>
+<br>
+<br>
+<table width="100%" border="0" cellspacing="0" cellpadding="1" align="center">
+<tr> 
+<td> 
+<table width="100%" border="0" cellspacing="0" cellpadding="5" >
+<tr> 
+<td colspan="2" bgcolor="#CCCCCC"><span class="sidebarHeader">Afstemning</span><span class="contentHeader2"></span></td>
+</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr> 
+<td valign="top"> 
+<table width="90%" border="0" cellspacing="0" cellpadding="0" align="center">
+<tr> 
+<td><br>
+<form name="form1" method="post" action="afstemning.asp">
+<div align="center"><span class="formLabeltext">V&aelig;lg Afstemning</span> 
+<select name="valg" class="formInputobject" onChange="this.form.submit();">
+<option value="0" selected>V&aelig;lg</option>
+<%
+While (NOT rsAfstem.EOF)
+%>
+<option value="<%=(rsAfstem.Fields.Item("id").Value)%>" ><%=(rsAfstem.Fields.Item("name").Value)%></option>
+<%
+  rsAfstem.MoveNext()
+Wend
+If (rsAfstem.CursorType > 0) Then
+  rsAfstem.MoveFirst
+Else
+  rsAfstem.Requery
+End If
+%>
+</select>
+</div>
+</form>
+</td>
+<td>
+<p><span class="listheader"><br>
+Aktuel afstemning:<br>
+</span> 
+<% If Not rsChosen.EOF Or Not rsChosen.BOF Then %>
+<%=(rsChosen.Fields.Item("name").Value)%> 
+<% End If ' end Not rsChosen.EOF Or NOT rsChosen.BOF %>
+<br>
+<%link="start_afstemning.asp?id=" & (rsChosen.Fields.Item("id").Value) %>
+<a href="javascript:MM_openBrWindow('<%=link %>','StartAfstemning','width=400,height=300')">Start 
+afstemning</a> </p>
+<p><b>Konkurrence:</b><br>
+<a href="/admin/ei/tema/konkurrence_vinder.asp">Find en vinder</a><br>
+</p>
+</td>
+</tr>
+</table>
+<br>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr> 
+<td background="/shared/graphics/layout/dots_horz.gif"><img src="/shared/graphics/spacer.gif" width="3" height="1"></td>
+</tr>
+<tr height="20"> 
+<td><br>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<% 
+While ((Repeat1__numRows <> 0) AND (NOT rsAfstem.EOF)) 
+%>
+<tr> 
+<td> 
+<form ACTION="<%=MM_editAction%>" METHOD="POST" name="form2">
+<table border="0" cellpadding="0" cellspacing="3" align="center" width="90%">
+<tr> 
+<td colspan="8" background="/shared/graphics/layout/dots_horz.gif" height="2"><img src="/shared/graphics/spacer.gif" width="3" height="1"></td>
+</tr>
+<tr height="20"> 
+<td> 
+<div align="center"></div>
+</td>
+<td> 
+<div align="center"><span class="formLabeltext">navn</span><br>
+<input value="<%=(rsAfstem.Fields.Item("name").Value)%>" type="text" name="name" class="formInputobject">
+<br>
+</div>
+</td>
+<td>&nbsp; </td>
+<td> 
+<div align="center"><span class="listheader">beskrivelse</span><br>
+<textarea name="descr" class="formTextobjectLower"><%=(rsAfstem.Fields.Item("descr").Value)%></textarea>
+</div>
+</td>
+<td> 
+<div align="right"><br>
+</div>
+</td>
+<td> 
+<div align="center"><br>
+stop forslag<br>
+<input type="checkbox" name="forslag" value="checkbox" <%if rsAfstem("forslag")=1 then response.write ("checked") %>>
+</div>
+</td>
+<td> 
+<input type="submit" name="Submit" value="Gem">
+</td>
+</tr>
+</table>
+<input type="hidden" name="MM_update" value="true">
+<input type="hidden" name="MM_recordId" value="<%= rsAfstem.Fields.Item("id").Value %>">
+</form>
+</td>
+<td> 
+<table width="10%" border="0" cellspacing="0" cellpadding="0">
+<tr> 
+<td> 
+<form ACTION="<%=MM_editAction%>" METHOD="POST" name="form5">
+<p> </p>
+<p>&nbsp;</p>
+<input type="submit" name="Submit3" value="Slet">
+<input type="hidden" name="MM_delete" value="true">
+<input type="hidden" name="MM_recordId" value="<%= rsAfstem.Fields.Item("id").Value %>">
+</form>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<% 
+  Repeat1__index=Repeat1__index+1
+  Repeat1__numRows=Repeat1__numRows-1
+  rsAfstem.MoveNext()
+Wend
+%>
+</table>
+<form ACTION="<%=MM_editAction%>" METHOD="POST" name="form3">
+<table border="0" cellpadding="0" cellspacing="3" align="center" width="100%" bgcolor="#CCCCCC">
+<tr bgcolor="#CCCCCC"> 
+<td colspan="7" class="listheader"> 
+<div align="center">NYT AFSTEMNING's EMNE</div>
+</td>
+</tr>
+<tr  bgcolor="#CCCCCC"> 
+<td>&nbsp; </td>
+<td valign="top"> 
+<div align="center"><span class="formLabeltext">navn</span><br>
+<input type="text" name="name2" class="formInputobject">
+</div>
+</td>
+<td valign="top"> 
+<div align="center"> <span class="listheader">beskrivelse</span><br>
+<textarea name="descr2" class="formTextobjectLower"></textarea>
+</div>
+</td>
+<td> 
+<input type="submit" name="Submit2" value="Gem">
+</td>
+</tr>
+<tr bgcolor="#CCCCCC"> 
+<td colspan="7"><img src="/shared/graphics/spacer.gif" width="3" height="4"></td>
+</tr>
+</table>
+<input type="hidden" name="MM_insert" value="true">
+</form>
+</td>
+</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr> 
+<td background="/shared/graphics/layout/dots_horz.gif"><img src="/shared/graphics/spacer.gif" width="3" height="1"></td>
+</tr>
+<tr height="20"> 
+<td>&nbsp;</td>
+</tr>
+</table>
+<p>&nbsp;</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<!-- #EndEditable --> </td>
+</tr>
+<tr> 
+<td valign="bottom" align="left"> 
+<!--#include virtual="/shared/pagetools.asp"-->
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+<td background="/shared/graphics/layout/dots_vert.gif" width="1" valign="top"><img src="/shared/graphics/layout/cover_dots.gif" width="1" height="18"></td>
+</tr>
+<tr> 
+<td background="/shared/graphics/layout/dots_horz.gif" height="1" colspan="3"><img src="/shared/graphics/spacer.gif" width="3" height="1"></td>
+</tr>
+<tr align="center"> 
+<td colspan="3" class="footer" height="20" valign="middle">
+<!--#include virtual="/shared/footer.asp"-->
+</td>
+</tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>
+<%
+rsAfstem.Close()
+%>
+<%
+rsChosen.Close()
+%>
+<!--#include virtual="/shared/log.asp"-->

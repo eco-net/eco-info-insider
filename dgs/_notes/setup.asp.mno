@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_rsPageData" value="name:orgid;datatype:int,name:allok;datatype:smallint,name:newok;datatype:smallint,name:alldgb;datatype:smallint" />
+</info>

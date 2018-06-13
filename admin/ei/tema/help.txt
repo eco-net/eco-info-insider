@@ -1,0 +1,22 @@
+<table width="90%" border="0" cellspacing="0" cellpadding="0" align="center">
+<tr> 
+<td> 
+<p><span class="listheader">Hj&aelig;lp!!!!!!<br>
+<br>
+</span><img src="/shared/graphics/layout/tema.gif" width="40" height="12"> afkryds 
+n&aring;r linien tilh&oslash;rer temaet<br>
+<img src="/shared/graphics/layout/nyt.gif" width="40" height="12"> afkryds for 
+at fremh&aelig;ve en nyhed som ikke h&oslash;rer til temaet<br>
+<span class="listheader">Afkryds ikke begge!!!<br>
+<br>
+Tekst </span>er den linie der vises p&aring; forsiden.<br>
+N&aring;r <span class="listheader">Link </span>udfyldes bliver tekst skrevet som 
+en link, ellers ikke.</p>
+<p><span class="listheader">Linie </span>sorterer linierne.<br>
+Linierne vises p&aring; forsiden n&aring;r <span class="listheader">Vises</span> 
+er afkrydset, men alle vises p&aring; temasiden.</p>
+<p><span class="listheader">Sponsor/annonc&oslash;r </span>er en intern oplysning 
+om en betalende kunde. Er feltet udfyldt vises linkteksten fremh&aelig;vet</p>
+</td>
+</tr>
+</table>

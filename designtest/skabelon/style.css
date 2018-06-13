@@ -1,0 +1,184 @@
+/*grøn:73B209, lys grøn:ACCF6B, rød:FF11A5, mørk blå:1979B5, lys blå:08A6FF, ekstra lys blå:E7F1F7 */
+/*HTML*/
+body {
+	font-family: Verdana, Geneva, Arial, helvetica, sans-serif;
+	font-size: 11px;
+	background-color: #E7F1F7;
+}
+td {
+	font-family: Verdana, Geneva, Arial, helvetica, sans-serif;
+	font-size: 11px;
+}
+th {
+	font-family: Verdana, Geneva, Arial, helvetica, sans-serif;
+	font-size: 11px;
+}
+a:link {
+	text-decoration: none;
+	color: #1979B5;
+}
+a:visited {
+	text-decoration: none;
+	color: #1979B5;
+}
+a:active {
+	text-decoration: none;
+	color: #1979B5;
+}
+a:hover {
+	text-decoration: none;
+	color: #73B209;
+}
+.main {
+	width: 1134px;
+	height: 400px;
+	position:relative;
+	left:20px;
+}
+.headerleft {
+	height: 64px;
+	float: left;
+	width: 454px;
+	margin: 0px;
+	padding: 0px;
+	background-image: url(images/logo.gif);
+}
+.headerright {
+	height: 64px;
+	width: 508px;
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	background-color: #FFFFFF;
+}
+.leftcol {
+	float: left;
+	width: 192px;
+	height: 600px;
+	margin: 0px;
+	padding: 0px;
+	background-color: #FFFFFF;
+	border-right: medium solid #E7F1F7;
+}
+.maincol {
+	float: left;
+	width: 285px;
+	height: 600px;
+	background-color: #FFFFFF;
+}
+.widemaincol {
+	float: left;
+	width: 570px;
+	height: 600px;
+	background-color: #FFFFFF;
+}
+.content {
+	margin: 5px;
+}
+.rightcol {
+	float: left;
+	width: 192px;
+	height: 600px;
+	margin: 0px;
+	padding: 0px;
+	background-color: #FFFFFF;
+	border-left: medium solid #E7F1F7;
+}
+.topright {
+	float: left;
+	width: 172px;
+	height: 64px;
+	margin: 0px;
+	padding: 0px;
+}
+.googleaddright {
+	float: left;
+	width: 168px;
+	margin: 0px;
+	padding: 0px;
+	background-color: #FFFFFF;
+	border-left: medium solid #E7F1F7;
+	height: 600px;
+}
+.footer {
+	float: left;
+	height: 40px;
+	width: 962px;
+	background-color: #FFFFFF;
+	text-align: center;
+	border-top: medium solid #E7F1F7;
+
+}
+.headermenu {
+	width: 962px;
+	font-size: 12px;
+	/*background-color: #FFFFFF;*/
+	font-weight: bold;
+}
+.headermenu ul {
+	float:left;
+	width:100%;
+	padding:0;
+	margin:0;
+	list-style-type:none;
+	text-align: center;
+}
+.headermenu li {
+	display:inline;
+}
+
+.headermenu a{
+	float:left;
+	width:6em;
+	text-decoration:none;
+	color:white;
+	padding:0.2em 0.6em;
+	border-right:1px solid white;
+	background-image: url(images/menu-bg2.gif);
+}
+.headermenu a:hover {
+	background-image: url(images/menu-bg-hover2.gif);
+}
+.breadcrum {
+	font-size: 11px;
+	margin: 5px;
+}
+.pagename {
+	font-size: 14px;
+	font-weight: bold;
+	color: #FF11A5;
+}
+.navigation {
+	font-size: 12px;
+	font-weight: bold;
+	margin: 5px;
+	color: #1979B5;
+}
+.search {
+	width: 100px;
+	font-size: 10px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.searchSubmit {
+	width: 50px;
+	font-size: 10px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.searchform {
+	text-align: right;
+	margin-top: 20px;
+	margin-right: 10px;
+}
+
+.afsnit {
+	font-size: 14px;
+	font-weight: bold;
+	margin: 5px;
+	color: #FF11A5;	
+}
+.overskrift {
+	font-size: 12px;
+	font-weight: bold;
+	margin: 5px;
+	color: #000000;	
+}

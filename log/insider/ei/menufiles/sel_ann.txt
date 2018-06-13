@@ -1,0 +1,11 @@
+<option value="0">&lt;V&aelig;lg&gt;</option>
+<option value="22">Artikler</option>
+<option value="16">Bæredygtig Udvikling</option>
+<option value="13">Danida</option>
+<option value="9">Det Økologiske Råd</option>
+<option value="15">FN</option>
+<option value="21">Juleideer</option>
+<option value="12">Lokal Agenda 21-kontakter</option>
+<option value="20">Pakkespil</option>
+<option value="23">Publikationer</option>
+<option value="19">Stiftelsen Idébanken i Norge</option>

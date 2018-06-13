@@ -1,0 +1,16 @@
+document.write('<option value="0" selected>&lt;V&aelig;lg&gt;</option>');
+document.write('<option value="10">Kommende kurser</option>');
+document.write('<option value="20">Afholdte kurser</option>');
+document.write('<option value="2001-12-01">December 2001</option>');
+document.write('<option value="2002-01-01">Januar 2002</option>');
+document.write('<option value="2002-02-01">Februar 2002</option>');
+document.write('<option value="2002-03-01">Marts 2002</option>');
+document.write('<option value="2002-04-01">April 2002</option>');
+document.write('<option value="2002-05-01">Maj 2002</option>');
+document.write('<option value="2002-06-01">Juni 2002</option>');
+document.write('<option value="2002-07-01">Juli 2002</option>');
+document.write('<option value="2002-08-01">August 2002</option>');
+document.write('<option value="2002-09-01">September 2002</option>');
+document.write('<option value="2002-10-01">Oktober 2002</option>');
+document.write('<option value="2002-11-01">November 2002</option>');
+document.write('<option value="2002-12-01">December 2002</option>');

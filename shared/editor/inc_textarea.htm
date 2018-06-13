@@ -1,0 +1,79 @@
+<%
+if len(bodyText)=0 then bodyText=""
+if len(CSTR(thenum & ""))=0 then thenum=0
+if len(CSTR(preview & ""))=0 then preview=0
+%><textarea name="bodyText" style="display: none;"><%=bodyText%></textarea>
+<textarea name="bodyText" style="display: none;"></textarea>
+<style type="text/css">
+.clsCursor {  cursor: hand}
+IFRAME {width: 100%; height: 100%}
+</style>
+<script language="JavaScript" src="/shared/editor/editor.js"></script>
+<script language="JavaScript">
+document.thenum=<%=thenum%>,document.htmlview=false
+var errorString = "Beklager - denne side kræver \nWindows 95 og Internet Explorer version 5 eller over\nfor at fungere."
+var Ok = "false";
+var name =  navigator.appName;
+var version =  parseFloat(navigator.appVersion);
+var platform = navigator.platform;
+if (platform == "Win32" && name == "Microsoft Internet Explorer" && version >= 4)Ok = "true";else Ok= "false";
+if (Ok == "false")alert(errorString);
+</script>
+<table border="0" cellspacing="0" cellpadding="0" width="100%" height="99%">
+<tr valign="top"><td width="100%" height="100%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" height="99%">
+<tr valign="top"><td width="100%">
+<div id=editbar > 
+<table width="100%" border="0" cellpadding="0" cellspacing="0" align="left">
+<tr><td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr valign="baseline"><td nowrap>
+<img class='clsCursor' src="/shared/editor/Cut.gif" width="16" height="16" border="0" alt="Klip " onClick="doFormat('Cut')">
+<img class='clsCursor' src="/shared/editor/Copy.gif" width="16" height="16" border="0" alt="Kopier" onClick="doFormat('Copy')">
+<img class='clsCursor' src="/shared/editor/Paste.gif" border="0" alt="Sæt ind" onClick="doFormat('Paste')" width="16" height="16">
+<img src="/shared/editor/spacer.gif" width="5" height="3">
+<img class='clsCursor' src="/shared/editor/para_bul.gif" width="16" height="16" border="0" alt="Punktliste" onClick="doFormat('InsertUnorderedList');">
+<img class='clsCursor' src="/shared/editor/para_num.gif" width="16" height="16" border="0" alt="Nummereret liste" onClick="doFormat('InsertOrderedList');">
+<img src="/shared/editor/spacer.gif" width="5" height="3">
+<img class='clsCursor' src="/shared/editor/indent.gif" width="20" height="16" alt="Ryk ind" onClick="doFormat('Indent')">
+<img class='clsCursor' src="/shared/editor/outdent.gif" width="20" height="16" alt="Ryk ud" onClick="doFormat('Outdent')">
+<img src="/shared/editor/spacer.gif" width="5" height="3">
+<img class='clsCursor' src="/shared/editor/Bold.gif" width="16" height="16" border="0" align="absmiddle" alt="Fed" onClick="doFormat('Bold')">
+<img class='clsCursor' src="/shared/editor/Italics.gif" width="16" height="16" border="0" align="absmiddle" alt="Kursiv" onClick="doFormat('Italic')">
+<img class='clsCursor' src="/shared/editor/underline.gif" width="16" height="16" border="0" align="absmiddle" alt="Understreg" onClick="doFormat('Underline')">
+<img src="/shared/editor/spacer.gif" width="5" height="3">
+<img class='clsCursor' src="/shared/editor/left.gif" width="16" height="16" border="0" alt="Venstrestil" align="absmiddle"  onClick="doFormat('JustifyLeft')">
+<img class='clsCursor' src="/shared/editor/centre.gif" width="16" height="16" border="0" alt="Centrer" align="absmiddle" onClick="doFormat('JustifyCenter')">
+<img class='clsCursor' src="/shared/editor/right.gif" width="16" height="16" border="0" alt="Højrestil" align="absmiddle"  onClick="doFormat('JustifyRight')">
+<img src="/shared/editor/strip_html.gif" width="16" height="16" alt="Fjern  Word-HTML" align="absmiddle" border="0" onClick="cleanWord('1')" class='clsCursor'>
+<img src="/shared/editor/help.gif" class='clsCursor' width="16" height="20" alt="Hjælp" onClick="GP_AdvOpenWindow('/shared/editor/help-gb.htm','help','fullscreen=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=no',400,380,'righttop','ignoreLink','',0,'');return document.MM_returnValue">
+<img src="/shared/editor/spacer.gif" width="6" height="16">
+<input type="button" name="btnSwapView" value="HTML-visning" onClick="SwapView_OnClick();"  class="formbutton" tabindex="-1">
+</td></tr></table>
+<table border="0" cellpadding="1" cellspacing="0">
+<tr valign="baseline"><td nowrap>
+<select name="what" style="font: 8pt verdana;" tabindex="-1">
+<option value="http://" selected>http://</option>
+<option value="mailto:">mailto:</option>
+<option value="ftp://">ftp://</option>
+<option value="https://">https://</option>
+</select>
+</td><td nowrap>
+<input type="text" name="url" size="30" style="font: 8pt verdana;" tabindex="-1" class="headline">
+</td><td>
+<input type="button" name="button2" value="Indsæt link" onClick="makeUrl();" class="formbutton">
+</td></tr></table>
+</td></tr></table>
+</div>
+</td></tr>
+<tr valign="top" align="left" width="100%" height="100%"><td>
+<table border="1" cellspacing="0" cellpadding="0" width="100%" height="100%">
+<tr valign="top"> 
+<td bgcolor="#FFFFFF" width="100%" height="100%">
+<iframe id=myEditor src="/shared/editor/pd_edit.asp?thenum=<%=thenum%>" onFocus="initToolBar(this)" scrolling="auto" <%if preview=1 then response.write "style=""display: none;"""%>></iframe>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<script language="JavaScript">
+	initToolBar("foo");
+</script>

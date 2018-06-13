@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_rsTables" value="name:TABLE_CATALOG;datatype:varchar,name:TABLE_SCHEMA;datatype:varchar,name:TABLE_NAME;datatype:varchar,name:TABLE_TYPE;datatype:varchar" />
+</info>

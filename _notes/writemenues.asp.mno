@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_rsOrgCat" value="name:id;datatype:int,name:name;datatype:varchar" />
+	<infoitem key="UD_rsCalCat" value="name:id;datatype:int,name:name;datatype:varchar" />
+	<infoitem key="UD_rsLibCat" value="name:id;datatype:int,name:name;datatype:varchar" />
+	<infoitem key="UD_rsOpslCat" value="name:ID;datatype:int,name:opslag_cat_betegn;datatype:varchar" />
+</info>

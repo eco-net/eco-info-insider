@@ -1,0 +1,2 @@
+document.write('<font style="font-size:larger"><b><a href="http://www.eco-info.dk/ok/detail.asp?id=17816&count=1&sektion1=dgs&recid1=17816&recname1=Informationscenteret for Miljø & Sundhed&offset=0" target="_blank">Officiel åbning af Informationscenteret for Miljø & Sundhed</a></b></font><br>24. september 2003 | København K<br><br>')
+document.write('<a href="http://www.eco-info.dk" target="_blank"><font style="color: #999999">Leveret af Øko-info</font></a>')

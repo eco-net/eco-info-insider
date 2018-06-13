@@ -1,0 +1,5 @@
+<%
+response.write "<tr><td><span class='sidebarHeader'><a href='http://www.johannesburgsummit.org/' >FN</a></span><br>" &_
+	"The official United Nations website for the Johannesburg Summit 2002<div align='center'><br><a href='http://www.johannesburgsummit.org/' ><img src='/log/ei/ads/johannesburg.gif' height='160' width='160' border='0'></a></div>" &_
+	"<br><br></td></tr>"
+%>

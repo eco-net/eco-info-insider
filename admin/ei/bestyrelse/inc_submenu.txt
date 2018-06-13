@@ -1,0 +1,1 @@
+response.write "<img src=""/shared/graphics/spacer.gif"" width=""5"" height=""10""><a href=""/admin/ei/vindue/functions.asp"">&Oslash;ko-info</a> | <a href=""/admin/ei/sekretariat/index.asp"">Sekretariat</a> | <a href=""/admin/ei/billedbasen/index.asp"">Billedbasen</a> | <a href=""/admin/ei/opsl/index.asp"">Opslagstavlen</a> | <a href=""/admin/ei/mails/functions.asp"">Email</a>"

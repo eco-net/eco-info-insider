@@ -1,0 +1,54 @@
+           
+<table width="388" border="0" cellspacing="0" cellpadding="0">
+<tr> 
+<td><img src="/log/ei/home/splashes/dor_1.gif" width="128" height="90"></td>
+<td rowspan="2" background="/shared/graphics/layout/dots_vert.gif" width="1"><br>
+</td>
+<td><img src="/log/ei/home/splashes/92-gruppen_1.gif" width="128" height="90"></td>
+<td rowspan="2" background="/shared/graphics/layout/dots_vert.gif" width="1"><br>
+</td>
+<td><img src="/log/ei/home/splashes/DenIndreSvineHund.JPG" width="128" height="90"></td>
+</tr>
+<tr> 
+<td valign="top"> 
+<table width="100%" border="0" cellspacing="0" cellpadding="5">
+<tr> 
+<td class="home"><span class="homeHeader">Miljø-tidsskrifter</span><br>
+Der kommer jævnt hen mange ny bøger og andre publikationer om økologi og miljø. I Det Grønne Bibliotek kan du søge relevant litteratur. Du kan bl.a. få en oversigt over de mange miljø-tidsskrifter i Danmark
+<br>
+<br>
+<a href="/dgb/list.asp?dgbcat=360&dgbcatname=Miljø- og naturtidsskrifter - nationale" >Læs mere...</a>
+</td>
+</tr>
+</table>
+</td>
+<td valign="top"> 
+<table width="100%" border="0" cellspacing="0" cellpadding="5">
+<tr> 
+<td class="home"><span class="homeHeader">På vej mod Rio+10</span><br>
+2002 er året for FN's næste store topmøde om bæredygtig <br>
+udvikling, i ti-året for FN's konference om miljø og udvikling i Rio de Janeiro i Brasilien. Mødet finder sted d. 26.8 - 4.9 i Johannesburg, Sydafrika.
+<br>
+<br>
+<a href="http://www.baeredygtigudvikling.dk" >L&aelig;s mere...</a>
+</td>
+</tr>
+</table>
+</td>
+<td valign="top"> 
+<table width="100%" border="0" cellspacing="0" cellpadding="5">
+<tr> 
+<td class="home">
+<span class="homeHeader">Vi gav en hånd; skal de nu ha’ sparket?</span><br>
+Den århusianske kampagne mod beskæringer af udviklingsbistanden har for alvor fået vind i sejlene. Bag kampagnen står en lang række organisationer, samlet i netværket Århus NGO-Forum.<br>
+Torsdag den 18. april kl. 19.30 afholdes det andet stormøde i kampagnen.<br>
+Her præsenteres bl.a. et helt nyt samarbejde med kunstneren Jens Galschiøt der gav verden skulpturen Den Indre Svinehund.
+<br>
+<br>
+<a href="/ok/detail.asp?id=11620" >L&aelig;s mere...</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>

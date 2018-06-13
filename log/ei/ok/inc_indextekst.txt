@@ -1,0 +1,18 @@
+<table width="100%" border="0" cellspacing="0" cellpadding="0" background="/shared/graphics/spacer.gif">
+<tr> 
+<td colspan="2" class="contentHeader1">Øko-kalenderen - indgang til engagement</td>
+</tr>
+<tr> 
+<td background="/shared/graphics/layout/dots_horz.gif" height="1" colspan="2"><img src="/shared/graphics/spacer.gif" width="3" height="1"></td>
+</tr>
+<tr> 
+<td width="66%" valign="top">
+<p>
+Efteråret er over os, og vi skal alle til at finde vintersyslerne frem. Lad det i den sammenhæng være os tilladt at henlede opmærksomheden på de mange foreninger og arrangementer man som ganske almindelig dansker kan engagere sig i - til eget og kommende generationers bedste.<br>
+<br>
+Her er et par stykker vi har valgt at fremhæve...
+</p>
+</td>
+<td width="34%">&nbsp;</td>
+</tr>
+</table>

@@ -1,0 +1,70 @@
+/* ----------------------------------------------------------------------------------------------------------
+
+    This website template was downloaded from http://www.nuviotemplates.com - visit us for more templates
+
+---------------------------------------------------------------------------------------------------------- */
+
+/* ----------------------------------------------------------------------------------------------------------
+HTML
+---------------------------------------------------------------------------------------------------------- */
+/*color scheme:
+5A1C00, D65508, FFE794, 427521, ADCF63
+DED3D6, D63C18, 184952, 63758C, 4A6131
+E77500, 842C52, F7C300, 007942, 52205A
+*/
+
+body {background:#52205A; color:#000;}
+
+a {color:#842C52;}
+a:hover {color:#007942;}
+
+fieldset {border:1px solid #CEE780;}
+legend {background:#FFF; color:#25A8C4;}
+
+table.table-style01 th {background:#25A8C4; color:#FFF;}
+table.table-style01 th, table.table-style01 td {border:1px solid #7FD5E7;}
+table.table-style01 tr.bg td {background:#D4F1F7;}
+
+/* ----------------------------------------------------------------------------------------------------------
+Layout
+---------------------------------------------------------------------------------------------------------- */
+
+#header {background:#52205A;}
+
+#logo {border-bottom:1px solid #D65508; color:#FFF;}
+#logo span {color:#F7C300;}
+#logo a {color:#F7C300;}
+
+#slogan {color:#F7C300;}
+
+#search #search-input {border:1px solid #FFF;}
+#search #search-submit {border:1px solid #842C52; background:#E77500; color:#FFF;}
+
+#nav {background-color:#F7C300;}
+#nav li a {border-left:1px solid #52205A; color:#000000;}
+#nav li.last a {border-right:1px solid #52205A;}
+#nav li#nav-active a {background:#007942; color:#FFF;}
+#nav li a:hover {background:#007942; color:#000000;}
+
+#cols .main {background-color:#FFF;}
+
+#content h1 {border-bottom:1px solid #95DCEB;}
+#content h2, #content h3, #content h4 {border-bottom:1px solid #007942; color:#52205A;}
+
+#aside h3 {color:#7DAC09;}
+#aside ul li {border-bottom:1px solid #CEE780;}
+
+#footer {background:#E77500; color:#52205A;}
+#footer a {color:#52205A;}
+#footer a:hover {color:#FFF;}
+
+/* ----------------------------------------------------------------------------------------------------------
+Page: Homepage
+---------------------------------------------------------------------------------------------------------- */
+
+#perex {border-bottom:5px solid #95DCEB; background:#D4F1F7;}             
+
+.section {border-bottom:1px solid #842C52; background:#F7C300;}
+.section h3 {background-color:#842C52; color:#FFF;}
+.section h3 a {color:#FFF;}
+.section h3 a:hover {color:#000;}

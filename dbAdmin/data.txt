@@ -1,0 +1,426 @@
+<table border="1"><tr><td>1 </td><td> </td><td>01-09-2001 21:07:54 </td></tr><tr><td>4 </td><td>CREATE TABLE ei_test
+(
+id int identity,
+name varchar(200) NULL,
+descr varchar(4000),
+createdate datetime DEFAULT getdate(),
+modidate datetime DEFAULT getdate(),
+PRIMARY KEY(id)
+) </td><td>01-09-2001 21:17:06 </td></tr><tr><td>19 </td><td>CREATE TABLE eisys_ 
+(
+id integer identity,
+
+PRIMARY KEY (id)
+) </td><td>01-09-2001 22:57:44 </td></tr><tr><td>24 </td><td>CREATE TABLE eisys_feedback
+(
+id integer identity,
+subject varchar(50),
+message varchar(4000),
+answer varchar(1000),
+url varchar(100),
+registered char(3) DEFAULT 'Nej',
+action smallint,
+createdate datetime DEFAULT getdate(),
+userid integer,
+PRIMARY KEY (id)
+) </td><td>01-09-2001 23:07:04 </td></tr><tr><td>25 </td><td>CREATE TABLE eisys_helptexts
+(
+id integer identity,
+application varchar(50),
+curtab smallint,
+cursub smallint,
+helptext varchar(4000),
+PRIMARY KEY (id)
+) </td><td>01-09-2001 23:09:40 </td></tr><tr><td>26 </td><td>CREATE TABLE eisys_kommuner
+(
+nr smallint,
+navn varchar(100),
+amtnr integer,
+PRIMARY KEY (nr)
+) </td><td>01-09-2001 23:14:00 </td></tr><tr><td>28 </td><td>CREATE TABLE eisys_amter
+(
+nr smallint,
+navn varchar(100),
+PRIMARY KEY (nr)
+) </td><td>01-09-2001 23:15:08 </td></tr><tr><td>30 </td><td>CREATE TABLE eisys_siteapp_r_amt
+(
+siteid integer,
+appid integer,
+amtnr smallint,
+PRIMARY KEY (siteid,appid,amtnr)
+) </td><td>01-09-2001 23:33:35 </td></tr><tr><td>31 </td><td>CREATE TABLE eisys_siteapp_r_cat
+(
+siteid integer,
+appid integer,
+catid integer,
+PRIMARY KEY (siteid,appid,catid)
+) </td><td>01-09-2001 23:35:07 </td></tr><tr><td>32 </td><td>CREATE TABLE eisys_siteapp_r_sbj
+(
+siteid integer,
+appid integer,
+sbjid integer,
+PRIMARY KEY (siteid,appid,sbjid)
+) </td><td>01-09-2001 23:35:52 </td></tr><tr><td>33 </td><td>CREATE TABLE eisys_siteapp_r_postnr
+(
+siteid integer,
+appid integer,
+postnr_start smallint,
+postnr_slut smallint
+PRIMARY KEY (siteid,appid)
+) </td><td>01-09-2001 23:39:30 </td></tr><tr><td>35 </td><td>CREATE TABLE eisys_site_r_applications
+(
+id integer identity,
+siteid integer,
+appid integer,
+searchtype smallint DEFAULT 0,
+hasowndescr smallint DEFAULT 0,
+autoattach smallint DEFAULT 0,
+uniqueid float,
+lastupdate datetime DEFAULT getdate(),
+PRIMARY KEY (id)
+) </td><td>01-09-2001 23:47:52 </td></tr><tr><td>37 </td><td>CREATE TABLE eisys_sites
+(
+id integer identity,
+name varchar(200),
+orgid integer,
+parentsite integer,
+description varchar(500),
+hasindex smallint,
+indexsiteid integer,
+PRIMARY KEY (id)
+) </td><td>01-09-2001 23:52:55 </td></tr><tr><td>38 </td><td>CREATE TABLE eisys_userlevels
+(
+nr smallint,
+name varchar(100),
+description varchar(500),
+PRIMARY KEY (nr)
+) </td><td>01-09-2001 23:59:18 </td></tr><tr><td>39 </td><td>CREATE TABLE eisys_users
+(
+id integer identity,
+name varchar(150),
+loginname char(10),
+password char(10),
+emailaddress varchar(100),
+userlevel smallint DEFAULT 0,
+siteid integer DEFAULT 0,
+sendmail smallint DEFAULT 0,
+orgid integer DEFAULT 0,
+PRIMARY KEY (id)
+) </td><td>02-09-2001 00:03:11 </td></tr><tr><td>40 </td><td>CREATE TABLE eisys_applog
+(
+logdate datetime DEFAULT getdate(),
+referrer varchar(100),
+pagename varchar(50),
+orgid integer DEFAULT 0,
+siteid integer DEFAULT 0,
+appid integer DEFAULT 0
+) </td><td>02-09-2001 00:17:05 </td></tr><tr><td>44 </td><td>CREATE TABLE eisys_postnr
+(
+postnr smallint,
+city varchar(100),
+provins char(5),
+land smallint,
+komnr smallint,
+amtnr smallint,
+PRIMARY KEY (postnr)
+) </td><td>02-09-2001 00:42:59 </td></tr><tr><td>48 </td><td>CREATE TABLE eiAPPNAME_maindata
+(
+id int identity,
+name varchar(200) NULL,
+descr varchar(4000),
+
+validated smallint DEFAULT 0,
+createdate datetime DEFAULT getdate(),
+modidate datetime DEFAULT getdate(),
+PRIMARY KEY(id)
+) </td><td>02-09-2001 01:27:16 </td></tr><tr><td>53 </td><td>CREATE TABLE eiAPPNAME_categories
+(
+id integer identity,
+name varchar(40),
+siteid integer DEFAULT 0,
+onlevel1 smallint DEFAULT 0,
+sortnr smallint,
+PRIMARY KEY (id)
+) </td><td>02-09-2001 09:19:14 </td></tr><tr><td>57 </td><td>CREATE TABLE eisbj_maindata
+(
+id integer identity,
+name varchar(40),
+siteid integer DEFAULT 0,
+onlevel1 smallint DEFAULT 0,
+sortnr smallint,
+PRIMARY KEY (id)
+) </td><td>02-09-2001 09:23:24 </td></tr><tr><td>58 </td><td>CREATE TABLE eisel_maindata
+(
+id integer identity,
+name varchar(40),
+siteid integer DEFAULT 0,
+seltype smallint DEFAULT 2,
+PRIMARY KEY (id)
+) </td><td>02-09-2001 09:25:43 </td></tr><tr><td>59 </td><td>CREATE TABLE eiAPPNAME_categories_r_self
+(
+parentid integer,
+childid integer,
+sortnr smallint,
+levelid varchar(20),
+PRIMARY KEY (parentid,childid)
+) </td><td>02-09-2001 09:36:09 </td></tr><tr><td>71 </td><td>CREATE TABLE eisbj_structure
+(
+parentid integer,
+childid integer,
+sortnr smallint,
+levelid varchar(20),
+PRIMARY KEY (parentid,childid)
+) </td><td>02-09-2001 09:51:01 </td></tr><tr><td>72 </td><td>CREATE TABLE eical_cat_maindata
+(
+id integer identity,
+name varchar(40),
+siteid integer DEFAULT 0,
+onlevel1 smallint DEFAULT 0,
+sortnr smallint,
+PRIMARY KEY (id)
+) </td><td>02-09-2001 09:54:24 </td></tr><tr><td>76 </td><td>CREATE TABLE eilib_cat_maindata
+(
+id integer identity,
+name varchar(40),
+siteid integer DEFAULT 0,
+onlevel1 smallint DEFAULT 0,
+sortnr smallint,
+PRIMARY KEY (id)
+) </td><td>02-09-2001 09:57:28 </td></tr><tr><td>77 </td><td>CREATE TABLE eiorg_cat_maindata
+(
+id integer identity,
+name varchar(40),
+siteid integer DEFAULT 0,
+onlevel1 smallint DEFAULT 0,
+sortnr smallint,
+PRIMARY KEY (id)
+) </td><td>02-09-2001 09:57:41 </td></tr><tr><td>81 </td><td>CREATE TABLE eical_cat_structure
+(
+parentid integer,
+childid integer,
+sortnr smallint,
+levelid varchar(20),
+PRIMARY KEY (parentid,childid)
+) </td><td>02-09-2001 09:59:28 </td></tr><tr><td>82 </td><td>CREATE TABLE eilib_cat_structure
+(
+parentid integer,
+childid integer,
+sortnr smallint,
+levelid varchar(20),
+PRIMARY KEY (parentid,childid)
+) </td><td>02-09-2001 09:59:40 </td></tr><tr><td>83 </td><td>CREATE TABLE eiorg_cat_structure
+(
+parentid integer,
+childid integer,
+sortnr smallint,
+levelid varchar(20),
+PRIMARY KEY (parentid,childid)
+) </td><td>02-09-2001 09:59:50 </td></tr><tr><td>85 </td><td>CREATE TABLE eisys_site_r_applications
+(
+id integer identity,
+siteid integer,
+appid integer,
+searchtype smallint DEFAULT 0,
+hasowndescr smallint DEFAULT 0,
+autoattach smallint DEFAULT 0,
+uniqueid float(24),
+lastupdate datetime DEFAULT getdate(),
+PRIMARY KEY (id)
+) </td><td>02-09-2001 10:14:31 </td></tr><tr><td>86 </td><td>CREATE TABLE eical_sitedata
+(
+id int identity,
+title varchar(250),
+subtitle varchar(250),
+shortdescription varchar(300),
+description varchar(4000),
+www varchar(100),
+calid integer,
+siteid integer,
+validated smallint DEFAULT 0,
+uniqueid float(24),
+PRIMARY KEY(id)
+) </td><td>02-09-2001 10:48:24 </td></tr><tr><td>89 </td><td>CREATE TABLE eilib_sitedata
+(
+id int identity,
+title varchar(250),
+subtitle varchar(250),
+shortdescription varchar(250),
+description varchar(4000),
+editorwwww varchar(100),
+libid integer,
+siteid integer,
+uniqueid float(24),
+validated smallint DEFAULT 0,
+PRIMARY KEY(id)
+) </td><td>02-09-2001 10:51:44 </td></tr><tr><td>90 </td><td>CREATE TABLE eiorg_sitedata
+(
+id int identity,
+name varchar(200),
+emailaddress1 varchar(100),
+www varchar(100),
+shortdescription varchar(300),
+description varchar(4000),
+orgid integer,
+siteid integer,
+uniqueid float(24),
+validated smallint DEFAULT 0,
+PRIMARY KEY(id)
+) </td><td>02-09-2001 10:54:28 </td></tr><tr><td>91 </td><td>CREATE TABLE eical_cat_sitedata
+(
+id integer identity,
+name varchar(40),
+catid integer,
+siteid integer,
+uniqueid float(24),
+PRIMARY KEY (id)
+) </td><td>02-09-2001 11:11:07 </td></tr><tr><td>92 </td><td>CREATE TABLE eilib_cat_sitedata
+(
+id integer identity,
+name varchar(40),
+catid integer,
+siteid integer,
+uniqueid float(24),
+PRIMARY KEY (id)
+) </td><td>02-09-2001 11:11:26 </td></tr><tr><td>93 </td><td>CREATE TABLE eiorg_cat_sitedata
+(
+id integer identity,
+name varchar(40),
+catid integer,
+siteid integer,
+uniqueid float(24),
+PRIMARY KEY (id)
+) </td><td>02-09-2001 11:11:39 </td></tr><tr><td>94 </td><td>CREATE TABLE eisbj_sitedata
+(
+id integer identity,
+name varchar(40),
+sbjid integer,
+siteid integer,
+uniqueid float(24),
+PRIMARY KEY (id)
+) </td><td>02-09-2001 11:12:48 </td></tr><tr><td>96 </td><td>Create table eical_r_org
+(
+calid integer,
+orgid integer,
+primary key(calid,orgid)
+) </td><td>02-09-2001 11:15:48 </td></tr><tr><td>97 </td><td>Create table eilib_r_org
+(
+libid integer,
+orgid integer,
+primary key(libid,orgid)
+) </td><td>02-09-2001 11:16:20 </td></tr><tr><td>100 </td><td>Create table eiorg_r_cat
+(
+orgid integer,
+catid integer,
+uniqueid float(24),
+primary key(orgid,catid)
+) </td><td>02-09-2001 11:19:37 </td></tr><tr><td>103 </td><td>Create table eical_r_cat
+(
+calid integer,
+catid integer,
+uniqueid float(24),
+primary key(calid,catid)
+) </td><td>02-09-2001 11:21:52 </td></tr><tr><td>104 </td><td>Create table eilib_r_cat
+(
+libid integer,
+catid integer,
+uniqueid float(24),
+primary key(libid,catid)
+) </td><td>02-09-2001 11:22:14 </td></tr><tr><td>105 </td><td>Create table eical_r_sbj
+(
+calid integer,
+sbjid integer,
+uniqueid float(24),
+primary key(calid,sbjid)
+) </td><td>02-09-2001 11:25:42 </td></tr><tr><td>106 </td><td>Create table eilib_r_sbj
+(
+libid integer,
+sbjid integer,
+uniqueid float(24),
+primary key(libid,sbjid)
+) </td><td>02-09-2001 11:26:08 </td></tr><tr><td>107 </td><td>Create table eiorg_r_sbj
+(
+orgid integer,
+sbjid integer,
+uniqueid float(24),
+primary key(orgid,sbjid)
+) </td><td>02-09-2001 11:26:28 </td></tr><tr><td>159 </td><td>drop table eilib_maindata
+
+ </td><td>02-09-2001 22:07:29 </td></tr><tr><td>160 </td><td>drop table eical_maindata
+
+ </td><td>02-09-2001 22:07:37 </td></tr><tr><td>161 </td><td>drop table eiorg_maindata
+
+ </td><td>02-09-2001 22:07:43 </td></tr><tr><td>162 </td><td>CREATE TABLE eical_maindata
+(
+id int identity,
+title varchar(500),
+subtitle varchar(500),
+shortdescription varchar(1500),
+description varchar(8000),
+startdate datetime,
+enddate datetime,
+fulladdress varchar(500),
+postnr smallint DEFAULT 0,
+amtnr smallint DEFAULT 0,
+komnr smallInt DEFAULT 0,
+emailaddress varchar(100),
+www varchar(100),
+phone varchar(100),
+monthstart smallint DEFAULT 0,
+monthend smallint DEFAULT 0,
+weekstart smallint DEFAULT 0,
+weekend smallint DEFAULT 0,
+validated smallint DEFAULT 0,
+createdate datetime DEFAULT getdate(),
+modidate datetime DEFAULT getdate(),
+varfmpid varchar(40),
+PRIMARY KEY(id)
+) </td><td>02-09-2001 22:08:12 </td></tr><tr><td>163 </td><td>CREATE TABLE eilib_maindata
+(
+id int identity,
+title varchar(500),
+subtitle varchar(500),
+shortdescription varchar(1500),
+description varchar(8000),
+language varchar(20),
+author varchar(500),
+year varchar(20),
+isbn varchar(50),
+editor varchar(250),
+editoremail varchar(100),
+editorwww varchar(100),
+webaddress varchar(100),
+validated smallint DEFAULT 0,
+createdate datetime DEFAULT getdate(),
+modidate datetime DEFAULT getdate(),
+varfmpid varchar(40),
+PRIMARY KEY(id)
+) </td><td>02-09-2001 22:09:03 </td></tr><tr><td>164 </td><td>CREATE TABLE eiorg_maindata
+(
+id int identity,
+name varchar(250),
+street1 varchar(150),
+street2 varchar(150),
+zip varchar(30),
+zip_dk smallint,
+amtnr smallint,
+city varchar(100),
+region varchar(100),
+country varchar(100),
+phone1 varchar(100),
+phone2 varchar(100),
+fax varchar(100),
+emailaddress1 varchar(100),
+emailaddress2 varchar(100),
+www varchar(100),
+shortdescription varchar(1500),
+description varchar(8000),
+firstname varchar(50),
+middlename varchar(50),
+lastname varchar(50),
+title varchar(50),
+fmpid varchar(40),
+validated smallint DEFAULT 0,
+createdate datetime DEFAULT getdate(),
+modidate datetime DEFAULT getdate(),
+PRIMARY KEY(id)
+) </td><td>02-09-2001 22:09:56 </td></tr><tr><td>165 </td><td>SELECT * FROM eical_cat_maindata </td><td>02-09-2001 22:14:31 </td></tr><tr><td>166 </td><td>select * from eical_maindata </td><td>02-09-2001 22:19:16 </td></tr><tr><td>167 </td><td>Select * From eical_maindata Where title Like '%møde%' </td><td>06-09-2001 21:25:02 </td></tr><tr><td>168 </td><td>SELECT * FROM eilib_maindata WHERE ID>700 </td><td>06-09-2001 22:24:48 </td></tr><tr><td>169 </td><td>SELECT * FROM eilib_maindata WHERE title is null </td><td>06-09-2001 22:25:19 </td></tr><tr><td>170 </td><td>SELECT Count(*) FROM eilib_maindata </td><td>06-09-2001 22:26:50 </td></tr><tr><td>171 </td><td>select varfmpid, title from eilib_maindata </td><td>06-09-2001 22:38:28 </td></tr><tr><td>172 </td><td>SELECT * FROM eilib_maindata WHERE ID>700 </td><td>06-09-2001 22:41:35 </td></tr><tr><td>173 </td><td>SELECT * FROM eilib_maindata WHERE ID>701 </td><td>06-09-2001 22:44:14 </td></tr><tr><td>174 </td><td>SELECT * FROM eilib_maindata WHERE Title is null </td><td>06-09-2001 22:44:37 </td></tr><tr><td>175 </td><td>SELECT title FROM eilib_maindata </td><td>06-09-2001 22:44:53 </td></tr><tr><td>176 </td><td>SELECT varfmpid,title FROM eilib_maindata </td><td>06-09-2001 22:45:22 </td></tr></table>

@@ -1,0 +1,19 @@
+<table width="100%" border="0" cellspacing="0" cellpadding="0" background="/shared/graphics/spacer.gif">
+<tr> 
+<td colspan="2" class="contentHeader1">Artikler</td>
+</tr>
+<tr> 
+<td background="/shared/graphics/layout/dots_horz.gif" height="1" colspan="2"><img src="/shared/graphics/spacer.gif" width="3" height="1"></td>
+</tr>
+<tr> 
+<td width="66%" valign="top">
+<p>
+I Øko-info's artikelbase samler vi hele artikler om økologi og miljø. Det gør det muligt at søge direkte i artiklerne. <br>
+Som på vores øvrige sider, kan alle registrerede brugere indsætte artikler i databasen, via Insider Øko-info.<br>
+Man kan også sende artikler til Øko-net pr. mail, så lægger vi dem ind i databasen.<br>
+
+</p>
+</td>
+<td width="34%">&nbsp;</td>
+</tr>
+</table>

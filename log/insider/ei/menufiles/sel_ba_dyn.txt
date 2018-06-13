@@ -1,0 +1,7 @@
+response.write "<option value=""0"">&lt;V&aelig;lg&gt;</option>"&_
+"<option value=""17"""
+IF 17=cursel THEN response.write " selected "
+response.write ">Gennemløbshus_Floyd</option>"&_
+"<option value=""11"""
+IF 11=cursel THEN response.write " selected "
+response.write ">Velkommen til Øko-info</option>"

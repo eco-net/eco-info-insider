@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_rsCategory" value="name:id;datatype:int,name:name;datatype:varchar" />
+	<infoitem key="UD_rsSubject" value="name:id;datatype:int,name:name;datatype:varchar" />
+	<infoitem key="UD_rsAmt" value="name:nr;datatype:smallint,name:navn;datatype:varchar" />
+	<infoitem key="UD_rsKommune" value="name:nr;datatype:smallint,name:navn;datatype:varchar,name:amtnr;datatype:int" />
+	<infoitem key="UD_rsDgsSubj" value="name:id;datatype:int,name:name;datatype:varchar" />
+	<infoitem key="UD_rsDgsCat" value="name:id;datatype:int,name:name;datatype:varchar" />
+</info>

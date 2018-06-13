@@ -1,0 +1,3 @@
+document.write('<font style="font-size:larger"><b><a href="http://www.oko-info.dk/ok/detail.asp?id=4660&count=1&sektion1=dgs&recid1=4660&recname1=Peter Frostholm&offset=0" target="_blank">Bæredygtig test</a></b></font><br>12 til 13. februar 2002<br><br>')
+document.write('<font style="font-size:larger"><b><a href="http://www.oko-info.dk/ok/detail.asp?id=4660&count=1&sektion1=dgs&recid1=4660&recname1=Peter Frostholm&offset=1" target="_blank">nyt arrangement</a></b></font><br>25. februar 2002 | Stenstrup<br><br>')
+document.write('<font style="font-size:smaller"><a href="http://www.oko-info.dk" target="_blank">Leveret af Øko-info</a></font>')

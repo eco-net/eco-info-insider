@@ -1,0 +1,13 @@
+document.write('<option value="0" selected>&lt;V&aelig;lg&gt;</option>');
+document.write('<option value="x5">Folk</option>');
+document.write('<option value="6">__arbejde</option>');
+document.write('<option value="4">__bolig</option>');
+document.write('<option value="9">__diverse folk</option>');
+document.write('<option value="8">__kontakt</option>');
+document.write('<option value="7">__uddannelse</option>');
+document.write('<option value="x4">Varer</option>');
+document.write('<option value="5">__byggeri</option>');
+document.write('<option value="3">__bytte</option>');
+document.write('<option value="13">__diverse varer </option>');
+document.write('<option value="1">__køb</option>');
+document.write('<option value="2">__salg</option>');

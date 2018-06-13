@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<info>
+	<infoitem key="UD_rsPageData" value="name:id;datatype:int,name:name;datatype:varchar,name:fullname;datatype:varchar,name:username;datatype:varchar,name:page;datatype:varchar,name:date;datatype:smalldatetime,name:app_id;datatype:int,name:sek;datatype:varchar,name:app_title;datatype:varchar" />
+</info>
